@@ -1,1 +1,1 @@
-# CS4125-Shop-Management-System
+# CS4125-Customer-Payment-System

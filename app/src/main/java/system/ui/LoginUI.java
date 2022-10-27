@@ -7,12 +7,12 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
-import UIControls.Login;
+import UIControls.LoginController;
 
 public class LoginUI extends AppCompatActivity {
     EditText editTextUsername , editTextPassword;
     Button buttonLogin;
-    Login login;
+    LoginController loginController;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,8 +24,8 @@ public class LoginUI extends AppCompatActivity {
         buttonLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                login = new Login();
-                if(login.verify(editTextUsername.getText().toString().trim(), editTextUsername.getText().toString().trim())){
+                loginController = new LoginController();
+                if(loginController.verify(editTextUsername.getText().toString().trim(), editTextUsername.getText().toString().trim())){
 
 
 

@@ -1,21 +1,23 @@
 package Database;
 
+import java.io.FileReader;
+
 public class ConnectUserDB {
 
     /*
-    Checks DB for username, if it doesnt not find username it returns null
+    Checks DB for username, if it doesnt not find username it returns false
      */
-    public String getUsername(String username){
-        return null;
+    public boolean getUsername(String username){
+        return true;
     }
 
 
 
     /*
-    Checks the db to see if the creds are correct
+    Finds the opposing password for username entered
      */
-    public boolean getCreds(String username, String password){
-        return false;
+    public String getPassword(String username){
+        return "password";
     }
 
 }

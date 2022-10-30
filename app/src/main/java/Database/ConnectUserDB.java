@@ -5,10 +5,10 @@ import java.io.FileReader;
 public class ConnectUserDB {
 
     /*
-    Checks DB for username, if it doesnt not find username it returns false
+    Finds username in the db, if username is not there it will return null
      */
-    public boolean getUsername(String username){
-        return true;
+    public String getUsername(String username){
+        return "username";
     }
 
 

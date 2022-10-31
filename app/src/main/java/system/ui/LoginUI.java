@@ -6,12 +6,14 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 
 import UIControls.LoginController;
 
 public class LoginUI extends AppCompatActivity {
     EditText editEmail, editPassword;
     Button loginButton;
+    TextView toSignUp;
     LoginController loginController;
 
     @Override
@@ -42,5 +44,6 @@ public class LoginUI extends AppCompatActivity {
         editEmail = findViewById(R.id.editEmail);
         editPassword = findViewById(R.id.editPassword);
         loginButton = findViewById(R.id.loginButton);
+        toSignUp = findViewById(R.id.signUpLink);
     }
 }

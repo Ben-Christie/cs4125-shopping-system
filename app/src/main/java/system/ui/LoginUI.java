@@ -10,8 +10,8 @@ import android.widget.EditText;
 import UIControls.LoginController;
 
 public class LoginUI extends AppCompatActivity {
-    EditText editTextUsername , editTextPassword;
-    Button buttonLogin;
+    EditText editEmail, editPassword;
+    Button loginButton;
     LoginController loginController;
 
     @Override
@@ -21,11 +21,11 @@ public class LoginUI extends AppCompatActivity {
 
         createObjects();
 
-        buttonLogin.setOnClickListener(new View.OnClickListener() {
+        loginButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 loginController = new LoginController();
-                if(loginController.verify(editTextUsername.getText().toString().trim(), editTextUsername.getText().toString().trim())){
+                if(loginController.verify(editEmail.getText().toString().trim(), editEmail.getText().toString().trim())){
 
 
 
@@ -39,8 +39,8 @@ public class LoginUI extends AppCompatActivity {
     }
 
     private void createObjects(){
-        editTextUsername = findViewById(R.id.editTextUsername);
-        editTextPassword = findViewById(R.id.editTextPassword);
-        buttonLogin = findViewById(R.id.buttonLogin);
+        editEmail = findViewById(R.id.editEmail);
+        editPassword = findViewById(R.id.editPassword);
+        loginButton = findViewById(R.id.loginButton);
     }
 }

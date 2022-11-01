@@ -10,6 +10,20 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.UI">
         <activity
+            android:name=".PurchaseHistoryUI"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".CartUI"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".SignUpUI"
             android:exported="false">
             <meta-data
@@ -20,7 +34,7 @@
             android:name=".LoginUI"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".HomeUI"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

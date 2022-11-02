@@ -1,4 +1,4 @@
-package Model.Login;
+package Model;
 
 import Database.ConnectUserDB;
 

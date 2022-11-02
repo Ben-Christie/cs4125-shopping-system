@@ -1,6 +1,6 @@
 package UIControls;
 
-import Model.Login.HomeService;
+import Model.HomeService;
 
 public class HomeController {
     HomeService homeService = new HomeService();

@@ -4,7 +4,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ReceivePurchase implements IPurchaseSubject{
-    List<IPurchaseObserver> observers = new ArrayList<>();
+    private List<IPurchaseObserver> observers = new ArrayList<>();
+    private List<IPurchaseInfoEntity> purchaseInfo = new ArrayList<>();
+
+
     @Override
     public void register(IPurchaseObserver o) {
         observers.add(o);
@@ -24,5 +27,9 @@ public class ReceivePurchase implements IPurchaseSubject{
         for (IPurchaseObserver o : observers){
             o.notify();
         }
+    }
+
+    public void receivePurchaseInfo(List<IPurchaseInfoEntity> purchaseInfo){
+        this.purchaseInfo = purchaseInfo;
     }
 }

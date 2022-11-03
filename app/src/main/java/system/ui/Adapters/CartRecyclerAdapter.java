@@ -8,9 +8,28 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import java.util.ArrayList;
+import java.util.List;
+
+import Model.Purchase.IPurchaseInfoEntity;
+import Model.Purchase.IPurchaseObserver;
+import Model.Purchase.IPurchaseSubject;
+import Model.Purchase.Purchase;
 import system.ui.R;
 
-public class CartRecyclerAdapter extends RecyclerView.Adapter<CartRecyclerAdapter.MyViewHolder> {
+public class CartRecyclerAdapter extends RecyclerView.Adapter<CartRecyclerAdapter.MyViewHolder> implements IPurchaseObserver{
+
+    private List<IPurchaseInfoEntity> purchaseInfo = new ArrayList<>();
+
+
+    @Override
+    public void update(List<IPurchaseInfoEntity> purchaseInfo) {
+        this.purchaseInfo = purchaseInfo;
+    }
+
+
+
+
     /*
         TODO: connect database to recycler adapter to be used in populating stock
     */
@@ -37,6 +56,7 @@ public class CartRecyclerAdapter extends RecyclerView.Adapter<CartRecyclerAdapte
 
     @Override
     public void onBindViewHolder(@NonNull CartRecyclerAdapter.MyViewHolder holder, int position) {
+        holder.itemName.setText(purchaseInfo.get(position).getName());
         /*
             Implement data for name, quantity, price and points here
             Referenced: https://www.youtube.com/watch?v=__OMnFR-wZU

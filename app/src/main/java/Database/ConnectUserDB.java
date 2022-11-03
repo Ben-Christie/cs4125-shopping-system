@@ -7,7 +7,7 @@ public class ConnectUserDB {
     /*
         Finds username in the db, if username is not there it will return null
     */
-    public String getUsername(String username){
+    public String getEmail(String username){
         return "username";
     }
 

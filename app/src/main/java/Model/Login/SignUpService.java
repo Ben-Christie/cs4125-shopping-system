@@ -8,8 +8,8 @@ public class SignUpService {
     /*
         verify credentials by checking email isn't in database already
     */
-    public boolean emailNotInDb(String username) {
-        if(db.getUsername(username) != null) {
+    public boolean emailNotInDb(String email) {
+        if(db.getEmail(email) != null) {
             return false;
         }
         return true;

@@ -2,10 +2,13 @@ package system.ui;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+
+import UIControls.PurchaseController;
 
 public class HomeUI extends AppCompatActivity {
     Button logoutButton, browseStockButton, purchaseHistoryButton, scanButton;
@@ -16,27 +19,20 @@ public class HomeUI extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_ui);
 
+
         createObjects();
 
-        logoutButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
+        logoutButton.setOnClickListener(view -> {
 
-            }
         });
 
-        browseStockButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
+        browseStockButton.setOnClickListener(view -> {
 
-            }
         });
 
-        scanButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-            }
+        scanButton.setOnClickListener(view -> {
+            Intent intent = new Intent(HomeUI.this, CartUI.class);
+            startActivity(intent);
         });
 
 //        cartButton.setOnClickListener(new View.OnClickListener() {
@@ -46,11 +42,8 @@ public class HomeUI extends AppCompatActivity {
 //            }
 //        });
 
-        purchaseHistoryButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
+        purchaseHistoryButton.setOnClickListener(view -> {
 
-            }
         });
     }
 

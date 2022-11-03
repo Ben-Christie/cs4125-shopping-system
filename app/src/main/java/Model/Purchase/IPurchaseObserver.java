@@ -1,5 +1,7 @@
 package Model.Purchase;
 
+import java.util.List;
+
 public interface IPurchaseObserver {
-    void update();
+    void update(List<IPurchaseInfoEntity> purchaseInfo);
 }

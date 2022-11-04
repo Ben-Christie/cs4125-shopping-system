@@ -7,6 +7,7 @@ import Database.KeepPurchase;
 import Model.Purchase.IPurchaseInfoEntity;
 import Model.Purchase.Purchase;
 import Model.Purchase.PurchaseInfoEntity;
+import Model.Purchase.PurchaseSender;
 import Model.Purchase.ReceivePurchase;
 import system.ui.Adapters.CartRecyclerAdapter;
 
@@ -26,7 +27,8 @@ public class PurchaseController {
         ReceivePurchase receivePurchase = new ReceivePurchase();
         Purchase p = new Purchase(receivePurchase);
         KeepPurchase kp = new KeepPurchase(receivePurchase);
-        CartRecyclerAdapter cartRecyclerAdapter = new CartRecyclerAdapter();
+        PurchaseSender ps = new PurchaseSender(receivePurchase);
+
 
 
         //***Example of purchase coming from the till ***//

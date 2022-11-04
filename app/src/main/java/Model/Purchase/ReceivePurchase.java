@@ -31,5 +31,6 @@ public class ReceivePurchase implements IPurchaseSubject{
 
     public void receivePurchaseInfo(List<IPurchaseInfoEntity> purchaseInfo){
         this.purchaseInfo = purchaseInfo;
+        notifyAllObservers();
     }
 }

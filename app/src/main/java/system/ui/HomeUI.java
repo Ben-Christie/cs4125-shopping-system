@@ -31,8 +31,9 @@ public class HomeUI extends AppCompatActivity {
         });
 
         scanButton.setOnClickListener(view -> {
-            Intent intent = new Intent(HomeUI.this, CartUI.class);
-            startActivity(intent);
+            PurchaseController pc = new PurchaseController();
+            pc.scan();
+            pc.receivePurchase();
         });
 
 //        cartButton.setOnClickListener(new View.OnClickListener() {

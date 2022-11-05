@@ -3,6 +3,8 @@ package Model.Purchase;
 import java.util.ArrayList;
 import java.util.List;
 
+import Database.DBEntity.IPurchaseInfoEntity;
+
 public class ReceivePurchase implements IPurchaseSubject{
     private List<IPurchaseObserver> observers = new ArrayList<>();
     private List<IPurchaseInfoEntity> purchaseInfo = new ArrayList<>();

@@ -11,10 +11,8 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.ArrayList;
 import java.util.List;
 
-import Model.Purchase.IPurchaseInfoEntity;
+import Database.DBEntity.IPurchaseInfoEntity;
 import Model.Purchase.IPurchaseObserver;
-import Model.Purchase.IPurchaseSubject;
-import Model.Purchase.Purchase;
 import system.ui.R;
 
 public class CartRecyclerAdapter extends RecyclerView.Adapter<CartRecyclerAdapter.MyViewHolder> implements IPurchaseObserver{

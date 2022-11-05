@@ -1,4 +1,6 @@
-package Model.Purchase;
+package Database.DBEntity;
+
+import Database.DBEntity.IPurchaseInfoEntity;
 
 public class PurchaseInfoEntity implements IPurchaseInfoEntity {
     String name;

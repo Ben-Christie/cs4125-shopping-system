@@ -3,13 +3,12 @@ package UIControls;
 import java.util.ArrayList;
 import java.util.List;
 
-import Database.KeepPurchase;
-import Model.Purchase.IPurchaseInfoEntity;
+import Model.Purchase.KeepPurchase;
+import Database.DBEntity.IPurchaseInfoEntity;
 import Model.Purchase.Purchase;
-import Model.Purchase.PurchaseInfoEntity;
+import Database.DBEntity.PurchaseInfoEntity;
 import Model.Purchase.PurchaseSender;
 import Model.Purchase.ReceivePurchase;
-import system.ui.Adapters.CartRecyclerAdapter;
 
 public class PurchaseController {
 
@@ -18,13 +17,14 @@ public class PurchaseController {
     }
 
     /*
-    Imitate receiving bulk purchase info from the till after customer has paid
+    Receive purchase info from the till and notify all observers
      */
     public void receivePurchase(){
-        List<IPurchaseInfoEntity> purchaseInfo = new ArrayList<>();
 
-
+        //The subject
         ReceivePurchase receivePurchase = new ReceivePurchase();
+
+        //Three observers, waiting for receive purchase to receive the purchase info
         Purchase p = new Purchase(receivePurchase);
         KeepPurchase kp = new KeepPurchase(receivePurchase);
         PurchaseSender ps = new PurchaseSender(receivePurchase);
@@ -32,11 +32,13 @@ public class PurchaseController {
 
 
         //***Example of purchase coming from the till ***//
+        List<IPurchaseInfoEntity> purchaseInfo = new ArrayList<>();
         purchaseInfo.add(new PurchaseInfoEntity("Banana",1.50));
         purchaseInfo.add(new PurchaseInfoEntity("Burger",3.99));
         purchaseInfo.add(new PurchaseInfoEntity("Chicken",4.50));
         //***Example of purchase coming from the till ***//
 
+        //receive purchase has got the info from the till, now we notify all observers
         receivePurchase.receivePurchaseInfo(purchaseInfo);
 
 

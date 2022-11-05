@@ -1,4 +1,4 @@
-package Model.Purchase;
+package Database.DBEntity;
 
 public interface IPurchaseInfoEntity {
     String getName();

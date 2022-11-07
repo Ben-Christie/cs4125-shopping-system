@@ -27,7 +27,7 @@ public class ReceivePurchase implements IPurchaseSubject{
     @Override
     public void notifyAllObservers() {
         for (IPurchaseObserver o : observers){
-            o.notify();
+            o.update(purchaseInfo);
         }
     }
 

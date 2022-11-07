@@ -14,6 +14,6 @@ public class TextSubscriber implements ISubscriberObserver{
 
     @Override
     public void update() {
-        System.out.println("Texting ");
+        System.out.println("Texting " + number);
     }
 }

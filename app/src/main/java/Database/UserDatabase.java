@@ -5,16 +5,16 @@ import java.util.List;
 
 import Database.DBEntity.UserDBEntity;
 
-public class UserDatabase {
+public class UserDatabase extends ConnectDatabase{
     List<UserDBEntity> usersDbInfo = new ArrayList<>();
     public UserDatabase(){
+        super("src\\\\main\\\\java\\\\Database\\\\CSVFiles\\\\users.csv");
                             //\CS4125-Online-Shopping-System\app\src\main\java\Database\CSVFiles
-        ConnectDatabase userDb = new ConnectDatabase("src\\\\main\\\\java\\\\Database\\\\CSVFiles\\\\users.csv");
-        parseDbInfo(userDb.dbInformation());
+        parseDbInfo();
     }
 
-    private void parseDbInfo(String dbInfo){
-        String[] fields = dbInfo.split(",");
+    private void parseDbInfo(){
+        String[] fields = dbInformation.split(",");
         if (fields.length < 3){
             System.out.println("Problem");
         }

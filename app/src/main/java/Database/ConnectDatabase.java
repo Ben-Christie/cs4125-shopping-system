@@ -9,7 +9,7 @@ import java.util.Scanner;
 Connects to the csv file and pulls all information from in
  */
 public class ConnectDatabase {
-    private String dbInformation = "";
+    public String dbInformation = "";
     public ConnectDatabase(String filepath) {
 
         //parsing a CSV file into Scanner class constructor
@@ -27,10 +27,5 @@ public class ConnectDatabase {
         }
         sc.close();  //closes the scanner
         dbInformation = dbInformation.replaceAll("(\\r|\\n)", "");
-    }
-
-    public String dbInformation(){
-        System.out.println(dbInformation);
-        return dbInformation;
     }
 }

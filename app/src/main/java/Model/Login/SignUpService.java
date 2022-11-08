@@ -1,7 +1,9 @@
 package Model.Login;
 
+import Database.UserDatabase;
+
 public class SignUpService {
-    ConnectUserDB db = new ConnectUserDB();
+    UserDatabase db = new UserDatabase();
 
     /*
         verify credentials by checking email isn't in database already

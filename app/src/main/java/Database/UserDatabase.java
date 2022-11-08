@@ -23,27 +23,31 @@ public class UserDatabase extends ConnectDatabase{
         }
     }
 
-    public UserDBEntity checkEmail(String email){
+    public int getUserId(String email){
         for(UserDBEntity user : usersDbInfo){
-            if(user.getEmail().compareToIgnoreCase(email) == 0){
-                return user;
+            if (email.equals(user.getEmail())){
+                return user.getUserId();
+            }
+        }
+        return -1;
+    }
+
+    public String getEmail(String email){
+        for(UserDBEntity user : usersDbInfo){
+            if(email.equals(user.getEmail())){
+                return user.getEmail();
             }
         }
         return null;
     }
 
-    private boolean checkPassword(UserDBEntity user, String password){
-        if(user.getPassword().equals(password)){
-            return true;
+    public boolean verifyPassword(String email, String password){
+        for(UserDBEntity user : usersDbInfo){
+            if(email.equals(user.getEmail())){
+                return user.getPassword().equalsIgnoreCase(password);
+            }
         }
         return false;
     }
-
-    public boolean verifyCreds(String email, String password){
-        UserDBEntity user = checkEmail(email);
-        if(user != null){
-            return checkPassword(user, password);
-        }
-        return false;
-    }
+    
 }

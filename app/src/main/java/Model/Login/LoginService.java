@@ -10,6 +10,10 @@ public class LoginService {
      */
     public boolean verifyCreds(String email,  String password){
         //Username is in the db
-        return db.verifyCreds(email,password);
+        if(db.getEmail(email) != null){
+            return db.verifyPassword(email,password);
+        }
+        return false;
+
     }
 }

@@ -1,7 +1,5 @@
 package Model.Login;
 
-import Database.ConnectUserDB;
-
 public class SignUpService {
     ConnectUserDB db = new ConnectUserDB();
 

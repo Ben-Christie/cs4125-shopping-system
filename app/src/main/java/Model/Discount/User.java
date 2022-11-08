@@ -25,13 +25,13 @@ public class User implements IDiscountState {
         silverDiscount = new SilverDiscount(this);
         bronzeDiscount = new BronzeDiscount(this);
 
-        if(this.loyaltyPoints > 500) {
+        if(this.loyaltyPoints < 500) {
             setDiscountState(bronzeDiscount);
-        } else if(this.loyaltyPoints > 1000) {
+        } else if(this.loyaltyPoints < 1000) {
             setDiscountState(silverDiscount);
-        } else if(this.loyaltyPoints > 1500) {
+        } else if(this.loyaltyPoints < 1500) {
             setDiscountState(goldDiscount);
-        } else if(this.loyaltyPoints > 2000) {
+        } else if(this.loyaltyPoints < 2000) {
             setDiscountState(platinumDiscount);
         }
     }

@@ -3,7 +3,14 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/aaron/AndroidStudioProjects/CS4125-Online-Shopping-System/app/src/main/res/layout/activity_browse_stock_ui.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/aaron/AndroidStudioProjects/CS4125-Online-Shopping-System/app/src/main/res/layout/activity_cart_ui.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/aaron/AndroidStudioProjects/CS4125-Online-Shopping-System/app/src/main/res/layout/activity_home_ui.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/aaron/AndroidStudioProjects/CS4125-Online-Shopping-System/app/src/main/res/layout/activity_login_ui.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/aaron/AndroidStudioProjects/CS4125-Online-Shopping-System/app/src/main/res/layout/activity_purchase_history_ui.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/aaron/AndroidStudioProjects/CS4125-Online-Shopping-System/app/src/main/res/layout/activity_sign_up_ui.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/aaron/AndroidStudioProjects/CS4125-Online-Shopping-System/app/src/main/res/layout/cart_data_row.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/aaron/AndroidStudioProjects/CS4125-Online-Shopping-System/app/src/main/res/layout/purchase_history_data_row.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/aaron/AndroidStudioProjects/UI/app/src/main/res/layout/activity_login_ui.xml" value="0.36666666666666664" />
       </map>
     </option>

@@ -26,14 +26,15 @@ public class LoginUI extends AppCompatActivity {
         loginButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                loginController = new LoginController();
-                if(loginController.verify(editEmail.getText().toString().trim(), editEmail.getText().toString().trim())){
+                loginController = new LoginController(LoginUI.this);
+                if(loginController.verify(editEmail.getText().toString().trim(), editPassword.getText().toString().trim())){
 
 
+                    System.out.println("login is correct");
 
-                    //Go to home page
 
-
+                }else {
+                    System.out.println("incorrect login");
                 }
             }
         });

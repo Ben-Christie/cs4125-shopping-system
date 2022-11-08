@@ -1,7 +1,9 @@
 package Model;
 
+import Database.UserDatabase;
+
 public class HomeService {
-    ConnectUserDB db = new ConnectUserDB();
+    //UserDatabase db = new UserDatabase();
 
     public void displayCustomerPoints() {
 

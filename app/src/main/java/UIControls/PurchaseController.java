@@ -16,10 +16,12 @@ public class PurchaseController {
         //Retrieve userId from db and send it through nfc on phone to till
     }
 
+
+
     /*
     Receive purchase info from the till and notify all observers
      */
-    public void receivePurchase(){
+    public void receivePurchaseFromTill(){
 
         //The subject
         ReceivePurchase receivePurchase = new ReceivePurchase();

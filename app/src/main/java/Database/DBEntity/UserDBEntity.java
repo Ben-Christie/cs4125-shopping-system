@@ -23,4 +23,14 @@ public class UserDBEntity {
     public String getPassword() {
         return password;
     }
+
+
+    @Override
+    public String toString() {
+        return "UserDBEntity{" +
+                "userId=" + userId +
+                ", email='" + email + '\'' +
+                ", password='" + password + '\'' +
+                '}';
+    }
 }

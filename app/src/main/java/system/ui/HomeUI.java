@@ -33,7 +33,7 @@ public class HomeUI extends AppCompatActivity {
         scanButton.setOnClickListener(view -> {
             PurchaseController pc = new PurchaseController();
             pc.scan();
-            pc.receivePurchase();
+            pc.receivePurchaseFromTill();
         });
 
 //        cartButton.setOnClickListener(new View.OnClickListener() {

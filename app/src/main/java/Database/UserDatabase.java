@@ -1,15 +1,18 @@
 package Database;
 
+import android.content.Context;
+
 import java.util.ArrayList;
 import java.util.List;
 
 import Database.DBEntity.UserDBEntity;
+import system.ui.R;
 
 public class UserDatabase extends ConnectDatabase{
     List<UserDBEntity> usersDbInfo = new ArrayList<>();
-    public UserDatabase(){
-        super("src\\\\main\\\\java\\\\Database\\\\CSVFiles\\\\users.csv");
-                            //\CS4125-Online-Shopping-System\app\src\main\java\Database\CSVFiles
+    public UserDatabase(Context context){
+        super(context, R.raw.users);
+                            //src/main/java/Database/CSVFiles/users.csv
         parseDbInfo();
     }
 
@@ -18,6 +21,7 @@ public class UserDatabase extends ConnectDatabase{
         if (fields.length < 3){
             System.out.println("Problem");
         }
+        System.out.println(dbInformation);
         for(int i = 0; i <= fields.length-3; i= i +3){
             usersDbInfo.add(new UserDBEntity(Integer.parseInt(fields[i]), fields[i+1], fields[i+2]));
         }
@@ -34,7 +38,7 @@ public class UserDatabase extends ConnectDatabase{
 
     public String getEmail(String email){
         for(UserDBEntity user : usersDbInfo){
-            if(email.equals(user.getEmail())){
+            if(email.equalsIgnoreCase(user.getEmail())){
                 return user.getEmail();
             }
         }
@@ -43,8 +47,9 @@ public class UserDatabase extends ConnectDatabase{
 
     public boolean verifyPassword(String email, String password){
         for(UserDBEntity user : usersDbInfo){
-            if(email.equals(user.getEmail())){
-                return user.getPassword().equalsIgnoreCase(password);
+            if(email.equalsIgnoreCase(user.getEmail())){
+                System.out.println(user.getPassword() + "   " + password);
+                return user.getPassword().equals(password);
             }
         }
         return false;

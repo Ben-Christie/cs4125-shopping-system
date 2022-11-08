@@ -3,16 +3,16 @@ package Model.Login;
 import Database.UserDatabase;
 
 public class SignUpService {
-    UserDatabase db = new UserDatabase();
+    //UserDatabase db = new UserDatabase(Context context);
 
     /*
         verify credentials by checking email isn't in database already
     */
     public boolean emailNotInDb(String email) {
-        if(db.getEmail(email) != null) {
-            return false;
-        }
-        return true;
+//        if(db.getEmail(email) != null) {
+//            return false;
+//        }
+       return true;
     }
 
     /*

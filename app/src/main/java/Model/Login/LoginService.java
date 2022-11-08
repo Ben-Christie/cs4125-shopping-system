@@ -24,6 +24,17 @@ public class LoginService {
             return db.verifyPassword(email,password);
         }
         return false;
-
+    }
+    /*
+    Create an account and adds said information to the db
+     */
+    public boolean createAccount(String email, String password){
+        if(db.getEmail(email) != null){
+            //email is already taken
+            return false;
+        }else{
+            return true;
+            //add username and password to the db
+        }
     }
 }

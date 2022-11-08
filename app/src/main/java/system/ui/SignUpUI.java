@@ -3,10 +3,14 @@ package system.ui;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+
+import UIControls.LoginController;
 
 public class SignUpUI extends AppCompatActivity {
     EditText editEmail, editPassword, editConfirmPassword;
@@ -20,10 +24,38 @@ public class SignUpUI extends AppCompatActivity {
         setContentView(R.layout.activity_sign_up_ui);
 
         createObjects();
+        signUpButton.setEnabled(false);
 
-        signUpButton.setOnClickListener(new View.OnClickListener() {
+        signUpButton.setOnClickListener(view -> {
+            LoginController createAccount = new LoginController(SignUpUI.this);
+            createAccount.createAccount(editEmail.getText().toString().trim(),editPassword.getText().toString().trim());
+
+        });
+        verifyConfirmPassword();
+    }
+
+
+
+    /*
+    UI side logic that checks if the password and confirmed password are the
+    same as you type them
+     */
+    private void verifyConfirmPassword(){
+        editConfirmPassword.addTextChangedListener(new TextWatcher() {
             @Override
-            public void onClick(View view) {
+            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) { }
+            @Override
+            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) { }
+
+            @Override
+            public void afterTextChanged(Editable editable) {
+                if(!editConfirmPassword.getText().toString().isEmpty()){
+                    if(editConfirmPassword.getText().toString().equals(editPassword.getText().toString())){
+                        signUpButton.setEnabled(true);
+                    }else {
+                        signUpButton.setEnabled(false);
+                    }
+                }
 
             }
         });

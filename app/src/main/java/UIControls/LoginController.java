@@ -12,9 +12,12 @@ public class LoginController {
         loginService = new LoginService(context);
     }
 
-    public boolean verify(String username, String password){
+    public boolean verify(String email, String password){
+        return loginService.verifyCreds(email,password);
+    }
 
-        return loginService.verifyCreds(username,password);
+    public boolean createAccount(String email, String password){
+        return loginService.createAccount(email,password);
     }
 
 

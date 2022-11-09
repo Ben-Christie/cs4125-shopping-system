@@ -41,6 +41,15 @@
                 android:textStyle="bold"
                 tools:text="Price: €X"/>
 
+        <Button
+            android:id="@+id/orderButton"
+            android:text="Order"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@id/stockItemName"
+            android:layout_marginEnd="0dp" />
+
 
     </RelativeLayout>
 

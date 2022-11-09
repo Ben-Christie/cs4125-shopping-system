@@ -4,13 +4,14 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
 import UIControls.PurchaseController;
 
 public class HomeUI extends AppCompatActivity {
-    Button logoutButton, browseProductButton, purchaseHistoryButton, scanButton;
+    Button logoutButton, browseProductButton, purchaseHistoryButton, scanButton, cartButton;
     TextView currentPoints, customerDiscountStatus;
 
     @Override
@@ -25,10 +26,19 @@ public class HomeUI extends AppCompatActivity {
 
         });
 
+        cartButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(HomeUI.this, CartUI.class);
+                startActivity(intent);
+
+            }
+        });
+
         browseProductButton.setOnClickListener(view -> {
             Intent intent = new Intent(HomeUI.this, BrowseProductUI.class);
             startActivity(intent);
-            finish();
+
         });
 
         scanButton.setOnClickListener(view -> {
@@ -53,7 +63,7 @@ public class HomeUI extends AppCompatActivity {
         logoutButton = findViewById(R.id.logoutButton);
         browseProductButton = findViewById(R.id.browseProductButton);
         scanButton = findViewById(R.id.scanButton);
-        //cartButton = findViewById(R.id.cartButton);
+        cartButton = findViewById(R.id.cartButton);
         purchaseHistoryButton = findViewById(R.id.purchaseHistoryButton);
         currentPoints = findViewById(R.id.currentPointsText);
         customerDiscountStatus = findViewById(R.id.customerStatusText);

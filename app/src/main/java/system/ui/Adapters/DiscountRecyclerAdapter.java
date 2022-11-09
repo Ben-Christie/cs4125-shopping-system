@@ -42,12 +42,10 @@ public class DiscountRecyclerAdapter extends RecyclerView.Adapter<DiscountRecycl
         */
 
         // String name = nameFromDatabase + ":";
-        // String quantity = quantityFromDatabase + " Available";
-        // String price = "Price: €" + priceFromDatabase;
+        // String discount =  discountFromDatabase + "% Off";
 
-        // holder.itemName.setText(name);
-        // holder.itemQuantity.setText(quantity);
-        // holder.itemPrice.setText(price);
+        // holder.discountedItem.setText(name);
+        // holder.discountAvailable.setText(discount);
     }
 
     @Override

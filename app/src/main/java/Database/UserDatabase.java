@@ -54,5 +54,11 @@ public class UserDatabase extends ConnectDatabase{
         }
         return false;
     }
+
+    public void getAll(){
+        for(UserDBEntity user : usersDbInfo){
+            System.out.println(user.toString());
+        }
+    }
     
 }

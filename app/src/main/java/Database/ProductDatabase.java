@@ -61,4 +61,18 @@ public class ProductDatabase extends ConnectDatabase {
         }
         return -1.0;
     }
+
+    public String getProductPrice(int id){
+        for(ProductDBEntity product : productDBEntityList){
+            if(product.getProductId() == id){
+                return String.valueOf(product.getProductPrice());
+            }
+        }
+        return "";
+    }
+
+    public int getAmountOfProducts(){
+        return productDBEntityList.size();
+    }
+
 }

@@ -5,6 +5,7 @@ import android.content.Context;
 import androidx.appcompat.app.AppCompatActivity;
 
 import java.io.BufferedReader;
+import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -20,10 +21,14 @@ Connects to the csv file and pulls all information from in
  */
 public class ConnectDatabase  {
     public String dbInformation = "";
+    int file;
+    Context context;
 
-    public ConnectDatabase(Context context, int file){
+    public ConnectDatabase(Context ctx, int file){
+        this.file = file;
+        this.context = ctx;
         //Read raw csvfile
-        InputStream is = context.getResources().openRawResource(R.raw.users);
+        InputStream is = context.getResources().openRawResource(file);
         BufferedReader br = new BufferedReader(new InputStreamReader(is));
         String line = "";
         try{
@@ -34,4 +39,10 @@ public class ConnectDatabase  {
             e.printStackTrace();
         }
     }
+
+//    public boolean writeToDB(String information){
+//        InputStream is = context.getResources().openRawResource(file);
+//        BufferedWriter bw = new BufferedWriter()
+//
+//    }
 }

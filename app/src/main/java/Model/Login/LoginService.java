@@ -17,8 +17,9 @@ public class LoginService {
     Verifies the username and password against what is available in the db
      */
     public boolean verifyCreds(String email,  String password){
-        System.out.println(email);
+        System.out.println("Cred entered : " + email + "  " + password);
         //Username is in the db
+        //db.getAll();
         if(db.getEmail(email) != null){
             System.out.println("email is working");
             return db.verifyPassword(email,password);

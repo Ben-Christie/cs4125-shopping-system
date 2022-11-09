@@ -10,32 +10,32 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import system.ui.R;
 
-public class StockRecyclerAdapter extends RecyclerView.Adapter<StockRecyclerAdapter.MyViewHolder> {
+public class DiscountRecyclerAdapter extends RecyclerView.Adapter<DiscountRecyclerAdapter.MyViewHolder> {
     /*
         TODO: connect database to recycler adapter to be used in populating stock
     */
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
-        private TextView itemName, itemQuantity, itemPrice;
+        private TextView discountedItem, discountAvailable;
 
         public MyViewHolder(final View view) {
             super(view);
-            itemName = view.findViewById(R.id.stockItemName);
-            itemQuantity = view.findViewById(R.id.stockItemQuantity);
-            itemPrice = view.findViewById(R.id.stockItemPrice);
+            discountedItem = view.findViewById(R.id.discountedItem);
+            discountAvailable = view.findViewById(R.id.discountAvailable);
 
         }
     }
 
+
     @NonNull
     @Override
-    public StockRecyclerAdapter.MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View stockView = LayoutInflater.from(parent.getContext()).inflate(R.layout.stock_data_row, parent, false);
+    public DiscountRecyclerAdapter.MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        View stockView = LayoutInflater.from(parent.getContext()).inflate(R.layout.discount_data_row, parent, false);
         return new MyViewHolder(stockView);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull StockRecyclerAdapter.MyViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull DiscountRecyclerAdapter.MyViewHolder holder, int position) {
         /*
             Implement data for name, quantity and price here
             Referenced: https://www.youtube.com/watch?v=__OMnFR-wZU
@@ -48,7 +48,6 @@ public class StockRecyclerAdapter extends RecyclerView.Adapter<StockRecyclerAdap
         // holder.itemName.setText(name);
         // holder.itemQuantity.setText(quantity);
         // holder.itemPrice.setText(price);
-
     }
 
     @Override

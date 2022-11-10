@@ -24,6 +24,10 @@
                 android:value="" />
         </activity>
         <activity
+            android:name=".BrowseProductUI"
+            android:exported="false">
+        </activity>
+        <activity
             android:name=".CartUI"
             android:exported="false">
             <meta-data

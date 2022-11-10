@@ -7,7 +7,7 @@ import Model.Subscriber.SubscriberTypes.ISubscriberObserver;
 
 public class SystemNotify implements ISystemNotify{
     List<ISubscriberObserver> subscribers = new ArrayList<>();
-
+    String message;
     @Override
     public void register(ISubscriberObserver o) {
         subscribers.add(o);
@@ -25,7 +25,13 @@ public class SystemNotify implements ISystemNotify{
     @Override
     public void notifyObservers() {
         for(ISubscriberObserver subs : subscribers){
-            subs.update();
+            subs.update(message);
         }
+    }
+
+
+    public void sendSubscribers(String message){
+        this.message = message;
+        notifyObservers();
     }
 }

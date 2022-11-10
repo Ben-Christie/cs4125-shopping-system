@@ -11,7 +11,7 @@ public class EmailSubscriber implements ISubscriberObserver {
     }
 
     @Override
-    public void update() {
-        System.out.println("Emailing " + email);
+    public void update(String message) {
+        System.out.println("Emailing " + email + " " + message);
     }
 }

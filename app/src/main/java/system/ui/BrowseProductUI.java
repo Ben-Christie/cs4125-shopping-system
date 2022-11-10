@@ -28,21 +28,14 @@ public class BrowseProductUI extends AppCompatActivity implements ProductRecycle
         //pass list of data into parentheses
         ProductOrderController productOrderController = new ProductOrderController(BrowseProductUI.this);
 
+
+
+
         ProductRecyclerAdapter productRecyclerAdapter = new ProductRecyclerAdapter(productOrderController.listOfProducts(),BrowseProductUI.this,BrowseProductUI.this);
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getApplicationContext());
         recyclerView.setLayoutManager(layoutManager);
         recyclerView.setItemAnimator(new DefaultItemAnimator());
         recyclerView.setAdapter(productRecyclerAdapter);
-//        List<ProductEntity> products = productOrderController.listOfProducts();
-//        if(products == null){
-//            System.out.println("Products is null -------------------------------------------------");
-//        }
-//
-//        recyclerView = findViewById(R.id.recyclerViewProduct);
-//        ProductRecyclerAdapter productRecyclerAdapter = new ProductRecyclerAdapter(products,
-//                BrowseProductUI.this,BrowseProductUI.this);
-//        recyclerView.setLayoutManager(new LinearLayoutManager(BrowseProductUI.this));
-//        recyclerView.setAdapter(productRecyclerAdapter);
 
     }
 

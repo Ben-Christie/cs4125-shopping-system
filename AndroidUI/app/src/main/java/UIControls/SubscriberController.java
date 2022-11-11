@@ -14,7 +14,7 @@ public class SubscriberController {
         SystemNotify is = new SystemNotify();
 
         //**List of subscribers coming from the db
-        List<ISubscriberObserver> subscribers = new ArrayList<>();
+        //List<ISubscriberObserver> subscribers = new ArrayList<>();
 
         //Factory method to determine which type of subscriber they are
         DigitalSubscriber ds = new DigitalSubscriber();

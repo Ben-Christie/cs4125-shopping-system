@@ -11,6 +11,7 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
 import java.util.Scanner;
 
 import system.ui.R;
@@ -40,9 +41,4 @@ public class ConnectDatabase  {
         }
     }
 
-//    public boolean writeToDB(String information){
-//        InputStream is = context.getResources().openRawResource(file);
-//        BufferedWriter bw = new BufferedWriter()
-//
-//    }
 }

@@ -1,7 +1,7 @@
 package com.shopmanagementsystem.spring;
 
-import com.shopmanagementsystem.spring.model.Database.User;
-import com.shopmanagementsystem.spring.model.Database.UserDAO;
+import com.shopmanagementsystem.spring.Database.DBEntity.User;
+import com.shopmanagementsystem.spring.Database.DAO.UserDAO;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;

@@ -1,4 +1,4 @@
-package com.shopmanagementsystem.spring.model.Database;
+package com.shopmanagementsystem.spring.Database.DBEntity;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;

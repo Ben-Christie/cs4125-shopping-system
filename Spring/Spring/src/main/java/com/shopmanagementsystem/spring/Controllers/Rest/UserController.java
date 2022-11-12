@@ -1,6 +1,6 @@
 package com.shopmanagementsystem.spring.Controllers.Rest;
 
-import com.shopmanagementsystem.spring.model.Database.User;
+import com.shopmanagementsystem.spring.Database.DBEntity.User;
 import com.shopmanagementsystem.spring.model.LoginSignUp.LoginService;
 import com.shopmanagementsystem.spring.model.LoginSignUp.SignUp;
 import org.springframework.web.bind.annotation.GetMapping;

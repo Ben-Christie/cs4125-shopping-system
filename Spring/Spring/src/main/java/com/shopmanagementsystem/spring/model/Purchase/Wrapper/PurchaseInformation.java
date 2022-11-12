@@ -1,7 +1,7 @@
 package com.shopmanagementsystem.spring.model.Purchase.Wrapper;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.shopmanagementsystem.spring.model.Database.Product;
+import com.shopmanagementsystem.spring.Database.DBEntity.Product;
 
 import java.util.ArrayList;
 import java.util.List;

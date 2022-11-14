@@ -27,7 +27,7 @@ class ApplicationTests {
 		userDAO.save(user);
 	}
 
-	//@Test
+	@Test
 	void getAllEmployees(){
 		List<User> users = userDAO.getAllUsers();
 		System.out.println(users);
@@ -38,6 +38,8 @@ class ApplicationTests {
 		List<Product> products = productDAO.getAllProducts();
 		System.out.println(products);
 	}
+
+
 
 
 

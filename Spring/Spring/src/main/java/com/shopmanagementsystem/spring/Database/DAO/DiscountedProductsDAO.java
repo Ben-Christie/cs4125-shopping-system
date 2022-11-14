@@ -1,5 +1,15 @@
 package com.shopmanagementsystem.spring.Database.DAO;
 
+import java.util.ArrayList;
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.util.Streamable;
+import org.springframework.stereotype.Service;
+
+import com.shopmanagementsystem.spring.Database.DBEntity.DiscountedProduct;
+import com.shopmanagementsystem.spring.Database.Repo.DiscountedProductRepo;
+
 @Service
 public class DiscountedProductsDAO {
     @Autowired

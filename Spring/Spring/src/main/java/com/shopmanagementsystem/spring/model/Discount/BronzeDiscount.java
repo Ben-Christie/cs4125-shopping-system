@@ -1,5 +1,7 @@
 package com.shopmnagementsystem.spring.model.Discount;
 
+import com.shopmnagementsystem.spring.Database.DBEntity.DiscountedProduct;
+
 public class BronzeDiscount implements IDiscountState {
     User user;
 
@@ -7,5 +9,24 @@ public class BronzeDiscount implements IDiscountState {
         user = newUser;
     }
 
+    @Override
+    public int[] getDiscountRange() {
+        int[] range = new int[2];
+
+        // 1 - 5%
+        int min = 1;
+        int max = 5;
+
+        range[0] = min;
+        range[1] = max;
+
+        return range;
+    }
+
+    @Override
+    public DiscountedProducts[] generateDiscountedProductList(int size, int[] discountRange) {
+
+
+    }
 
 }

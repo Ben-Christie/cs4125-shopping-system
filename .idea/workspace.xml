@@ -9,13 +9,16 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0956739d-f728-49fa-8454-a9dbbd477be3" name="Default Changelist" comment="setting up state design pattern files">
+    <list default="true" id="0956739d-f728-49fa-8454-a9dbbd477be3" name="Default Changelist" comment="discount state">
+      <change afterPath="$PROJECT_DIR$/Spring/Spring/src/main/java/com/shopmanagementsystem/spring/Database/DAO/DiscountedProductsDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Spring/Spring/src/main/java/com/shopmanagementsystem/spring/Database/DBEntity/DiscountedProduct.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Spring/Spring/src/main/java/com/shopmanagementsystem/spring/Database/Repo/DiscountedProductRepo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Spring/Spring/src/main/java/com/shopmanagementsystem/spring/model/Discount/BronzeDiscount.java" beforeDir="false" afterPath="$PROJECT_DIR$/Spring/Spring/src/main/java/com/shopmanagementsystem/spring/model/Discount/BronzeDiscount.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Spring/Spring/src/main/java/com/shopmanagementsystem/spring/model/Discount/GoldDiscount.java" beforeDir="false" afterPath="$PROJECT_DIR$/Spring/Spring/src/main/java/com/shopmanagementsystem/spring/model/Discount/GoldDiscount.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Spring/Spring/src/main/java/com/shopmanagementsystem/spring/model/Discount/IDiscountState.java" beforeDir="false" afterPath="$PROJECT_DIR$/Spring/Spring/src/main/java/com/shopmanagementsystem/spring/model/Discount/IDiscountState.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Spring/Spring/src/main/java/com/shopmanagementsystem/spring/model/Discount/PlatinumDiscount.java" beforeDir="false" afterPath="$PROJECT_DIR$/Spring/Spring/src/main/java/com/shopmanagementsystem/spring/model/Discount/PlatinumDiscount.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Spring/Spring/src/main/java/com/shopmanagementsystem/spring/model/Discount/SilverDiscount.java" beforeDir="false" afterPath="$PROJECT_DIR$/Spring/Spring/src/main/java/com/shopmanagementsystem/spring/model/Discount/SilverDiscount.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Spring/Spring/src/test/java/com/shopmanagementsystem/spring/ApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/Spring/Spring/src/test/java/com/shopmanagementsystem/spring/ApplicationTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,7 +87,9 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2GavQwx03oyr3A1dlywrPLUIWNR" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
@@ -157,7 +162,21 @@
       <option name="project" value="LOCAL" />
       <updated>1668447757627</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="discount state interface">
+      <created>1668450326824</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1668450326824</updated>
+    </task>
+    <task id="LOCAL-00003" summary="discount state">
+      <created>1668450463524</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1668450463524</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -173,6 +192,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="setting up state design pattern files" />
-    <option name="LAST_COMMIT_MESSAGE" value="setting up state design pattern files" />
+    <MESSAGE value="discount state interface" />
+    <MESSAGE value="discount state" />
+    <option name="LAST_COMMIT_MESSAGE" value="discount state" />
   </component>
 </project>

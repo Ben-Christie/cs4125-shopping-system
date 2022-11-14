@@ -8,13 +8,14 @@ import javax.persistence.Id;
 @Entity
 public class User {
 
-    //Makes id the primary key and auto increments
+    // Makes id the primary key and auto increments
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
     String name;
     String password;
+    int loyaltyPoints;
 
     @Override
     public String toString() {
@@ -22,6 +23,7 @@ public class User {
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", password='" + password + '\'' +
+                ", loyalty points='" + loyaltyPoints + '\'' +
                 '}';
     }
 
@@ -47,5 +49,13 @@ public class User {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public int getLoyaltyPoints() {
+        return loyaltyPoints;
+    }
+
+    public void setLoyaltyPoints(int loyaltyPoints) {
+        this.loyaltyPoints = loyaltyPoints;
     }
 }

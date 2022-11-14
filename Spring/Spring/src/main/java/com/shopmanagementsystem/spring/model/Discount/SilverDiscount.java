@@ -11,6 +11,12 @@ public class SilverDiscount implements IDiscountState {
     ProductDAO productDAO;
     DiscountedProductsDAO discountedProductsDAO;
 
+    Discount discount;
+
+    public SilverDiscount(Discount discount) {
+        this.discount = discount;
+    }
+
     @Override
     public int[] getDiscountRange() {
         int[] range = new int[2];

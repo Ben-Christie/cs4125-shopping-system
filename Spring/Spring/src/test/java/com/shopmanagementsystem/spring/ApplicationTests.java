@@ -14,9 +14,6 @@ class ApplicationTests {
 	@Autowired
 	private UserDAO userDAO;
 
-	@Autowired
-	private DiscountedProductsDAO discountedProductsDAO;
-
 	@Test
 	void addUser() {
 		User user = new User();
@@ -31,19 +28,7 @@ class ApplicationTests {
 		System.out.println(users);
 	}
 
-	@Test
-	void addDiscountedProduct() {
-		DiscountedProduct discountedProduct = new DiscountedProduct();
-		discountedProduct.setName("Bread");
-		discountedProduct.setDiscountAvailable(4);
-		discountedProductsDAO.save(discountedProduct);
-	}
 
-	@Test
-	void getAllDiscountedProducts() {
-		List<DiscountedProduct> discountedProductList = discountedProductsDAO.getAllDiscountedProducts();
-		System.out.println(discountedProductList);
-	}
 
 
 

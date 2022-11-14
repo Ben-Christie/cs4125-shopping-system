@@ -26,7 +26,10 @@ public class DiscountedProductsDAO {
     public List<DiscountedProduct> getAllDiscountedProducts() {
         List<DiscountedProduct> discountedProductList = new ArrayList<>();
 
-        Streamable.of(repository.findAll()).forEach(discountedProductList::add);
+        Streamable.of(repository.findAll())
+                .forEach(product -> {
+                    discountedProductList.add(product);
+                });
 
         return discountedProductList;
     }

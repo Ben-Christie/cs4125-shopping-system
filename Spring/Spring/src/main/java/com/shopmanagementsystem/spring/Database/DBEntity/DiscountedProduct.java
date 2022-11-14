@@ -13,6 +13,11 @@ public class DiscountedProduct {
     String name;
     int discountAvailable;
 
+    public DiscountedProduct(String newName, int newDiscountAvailable) {
+        name = newName;
+        discountAvailable = newDiscountAvailable;
+    }
+
     public int getId() {
         return id;
     }

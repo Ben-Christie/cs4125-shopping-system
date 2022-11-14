@@ -1,13 +1,15 @@
 package com.shopmanagementsystem.spring.model.Discount;
 
+import java.util.List;
+
+import com.shopmanagementsystem.spring.Database.DAO.ProductDAO;
 import com.shopmanagementsystem.spring.Database.DBEntity.DiscountedProduct;
+import com.shopmanagementsystem.spring.Database.DBEntity.Product;
+import com.shopmanagementsystem.spring.Database.DAO.DiscountedProductsDAO;
 
 public class SilverDiscount implements IDiscountState {
-    User user;
-
-    public SilverDiscount(User newUser) {
-        user = newUser;
-    }
+    ProductDAO productDAO;
+    DiscountedProductsDAO discountedProductsDAO;
 
     @Override
     public int[] getDiscountRange() {
@@ -24,8 +26,53 @@ public class SilverDiscount implements IDiscountState {
     }
 
     @Override
-    public DiscountedProducts[] generateDiscountedProductList(int size, int[] discountRange) {
+    public void generateDiscountedProductsList(int size, int[] discountRange) {
+        List<Product> products = productDAO.getAllProducts();
+
+        int[] indexes = getDiscountIndexes(products.size(), size);
+
+        for (int i = 0; i < products.size(); i++) {
+            if (indexSelected(i, indexes)) {
+                Product product = products.get(i);
+
+                DiscountedProduct discountedProduct = new DiscountedProduct(product.getName(),
+                        generateDiscountValue(discountRange[0], discountRange[1]));
+
+                discountedProductsDAO.save(discountedProduct);
+            }
+        }
 
     }
 
+    @Override
+    public int generateDiscountValue(int min, int max) {
+        int discount = (int) (Math.random() * (max - min) + min);
+
+        return discount;
+    }
+
+    @Override
+    public int[] getDiscountIndexes(int numValues, int size) {
+        int[] indexes = new int[size];
+
+        for (int i = 0; i < numValues; i++) {
+            int index;
+            do {
+                index = (int) (Math.random() * ((numValues - 1) - 0) + 0);
+            } while (indexSelected(index, indexes));
+
+            indexes[i] = index;
+        }
+        return indexes;
+    }
+
+    @Override
+    public boolean indexSelected(int index, int[] indexes) {
+        for (int i : indexes) {
+            if (i == index) {
+                return true;
+            }
+        }
+        return false;
+    }
 }

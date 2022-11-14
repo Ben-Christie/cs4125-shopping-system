@@ -1,0 +1,1 @@
+package com.shopmnagementsystem.spring.model.Discount;

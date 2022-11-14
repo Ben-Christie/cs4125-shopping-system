@@ -1,5 +1,7 @@
 package com.shopmnagementsystem.spring.model.Discount;
 
 public interface IDiscountState {
-    int[] getDiscountRange(IDiscountState discountState);
+    int[] getDiscountRange();
+
+    DiscountedProduct[] generateDiscountedProductsList(int size, int[] discountRange);
 }

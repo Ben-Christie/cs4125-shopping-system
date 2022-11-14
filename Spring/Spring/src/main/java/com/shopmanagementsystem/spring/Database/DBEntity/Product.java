@@ -11,9 +11,9 @@ public class Product {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     int id;
-
-    int price;
+    double price;
     String name;
+
 
 
     public int getId() {
@@ -24,7 +24,7 @@ public class Product {
         this.id = id;
     }
 
-    public int getPrice() {
+    public double getPrice() {
         return price;
     }
 

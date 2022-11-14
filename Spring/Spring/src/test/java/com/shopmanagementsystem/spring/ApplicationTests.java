@@ -1,5 +1,7 @@
 package com.shopmanagementsystem.spring;
 
+import com.shopmanagementsystem.spring.Database.DAO.ProductDAO;
+import com.shopmanagementsystem.spring.Database.DBEntity.Product;
 import com.shopmanagementsystem.spring.Database.DBEntity.User;
 import com.shopmanagementsystem.spring.Database.DAO.UserDAO;
 import org.junit.jupiter.api.Test;
@@ -14,10 +16,13 @@ class ApplicationTests {
 	@Autowired
 	private UserDAO userDAO;
 
-	@Test
+	@Autowired
+	private ProductDAO productDAO;
+
+	//@Test
 	void addUser() {
 		User user = new User();
-		user.setName("max@gmail.com");
+		user.setName("jeff@gmail.com");
 		user.setPassword("max123");
 		userDAO.save(user);
 	}
@@ -26,6 +31,12 @@ class ApplicationTests {
 	void getAllEmployees(){
 		List<User> users = userDAO.getAllUsers();
 		System.out.println(users);
+	}
+
+	@Test
+	void getAllProducts(){
+		List<Product> products = productDAO.getAllProducts();
+		System.out.println(products);
 	}
 
 

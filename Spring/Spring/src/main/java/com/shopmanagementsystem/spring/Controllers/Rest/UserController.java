@@ -2,41 +2,41 @@ package com.shopmanagementsystem.spring.Controllers.Rest;
 
 import com.shopmanagementsystem.spring.Database.DAO.UserDAO;
 import com.shopmanagementsystem.spring.Database.DBEntity.User;
-import com.shopmanagementsystem.spring.model.LoginSignUp.LoginService;
-import com.shopmanagementsystem.spring.model.LoginSignUp.SignUp;
+import com.shopmanagementsystem.spring.model.User.Login;
+import com.shopmanagementsystem.spring.model.User.SignUp;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.util.List;
-
 @RestController
 public class UserController {
-//    private List<User> users = new ArrayList<>();
+    
     @Autowired
-    private UserDAO userDAO;
+    private SignUp signUp;
 
-    @GetMapping("/Database/get-all")
-    public List<User> getAllUsers(){
-        return userDAO.getAllUsers();
-    }
+    @Autowired
+    private Login login;
 
+//    @GetMapping("/Database/get-all")
+//    public List<User> getAllUsers(){
+//        return userDAO.getAllUsers();
+//    }
+
+    /*
+    User signs up for the app, they are added to the db
+     */
     @PostMapping("/User/CreateUser")
     public boolean createUser(@RequestBody User user){
-        System.out.println(user.toString());
-        SignUp signUp = new SignUp();
-        signUp.createUser(user.getName(),user.getPassword());
-        //System.out.println(user);
-        //userDAO.save(user);
-        return true;
+        return signUp.createUser(user);
     }
 
-    @GetMapping("/User/VerifyCreds")
+    /*
+    User attempts a login, their cred are verified against what is in the db
+     */
+    @PostMapping("/User/VerifyCreds")
     public boolean verifyCreds(@RequestBody User user){
-        LoginService login = new LoginService();
-        login.verifyCreds();
-        return  true;
+        return login.verifyCreds(user);
     }
 }

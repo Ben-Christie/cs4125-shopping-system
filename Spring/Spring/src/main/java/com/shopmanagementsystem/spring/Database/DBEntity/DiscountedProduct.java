@@ -13,9 +13,9 @@ public class DiscountedProduct {
     String name;
     int discountAvailable;
 
-    public DiscountedProduct(String newName, int newDiscountAvailable) {
-        name = newName;
-        discountAvailable = newDiscountAvailable;
+    public DiscountedProduct(String name, int discountAvailable) {
+        this.name = name;
+        this.discountAvailable = discountAvailable;
     }
 
     public int getId() {

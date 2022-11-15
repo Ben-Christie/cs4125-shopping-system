@@ -5,7 +5,6 @@ import com.shopmanagementsystem.spring.Database.DAO.ProductDAO;
 import com.shopmanagementsystem.spring.Database.DBEntity.DiscountedProduct;
 import com.shopmanagementsystem.spring.Database.DBEntity.Product;
 import com.shopmanagementsystem.spring.Database.DBEntity.User;
-import com.shopmanagementsystem.spring.Database.Repo.DiscountedProductRepo;
 import com.shopmanagementsystem.spring.Database.DAO.UserDAO;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;

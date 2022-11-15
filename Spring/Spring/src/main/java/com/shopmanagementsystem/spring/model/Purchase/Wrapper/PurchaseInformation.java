@@ -21,12 +21,12 @@ public class PurchaseInformation {
         this.purchases = purchases;
     }
 
-    public void printInformation(){
-        if (purchases.size() == 0){
+    public void printInformation() {
+        if (purchases.size() == 0) {
             System.out.println("Empty");
         }
-        for(Product p : purchases){
-            System.out.println(purchases.toString());
+        for (Product p : purchases) {
+            System.out.println(p.toString());
         }
     }
 

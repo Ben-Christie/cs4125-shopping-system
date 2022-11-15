@@ -61,7 +61,7 @@ public class SilverDiscount implements IDiscountState {
     public int[] getDiscountIndexes(int numValues, int size) {
         int[] indexes = new int[size];
 
-        for (int i = 0; i < numValues; i++) {
+        for (int i = 0; i < size; i++) {
             int index;
             do {
                 index = (int) (Math.random() * ((numValues - 1) - 0) + 0);

@@ -1,16 +1,29 @@
 package com.shopmanagementsystem.spring.model.Purchase.Order;
 
+import com.shopmanagementsystem.spring.Database.DAO.CartDAO;
 import com.shopmanagementsystem.spring.Database.DBEntity.Product;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
+import java.util.List;
+
+@Component
 public class ProductOrder {
 
+    @Autowired
+    CartDAO cartDAO;
+
+
     public void addToCart(Product p){
-        System.out.println("adding " + p.getName() + " to cart");
+        cartDAO.addProduct(p);
     }
 
-    public void checkOut(){
-        System.out.println("Checking out all products");
-        //Convert cart into PurchaseInformation -> call subject PurchaseSubject
+    public void clearCart(){
+        cartDAO.clearCart();
+    }
+
+    public List<Product> checkOut(){
+        return cartDAO.getCart();
     }
 
 

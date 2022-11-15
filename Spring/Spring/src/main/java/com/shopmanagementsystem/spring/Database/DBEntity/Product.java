@@ -28,7 +28,7 @@ public class Product {
         return price;
     }
 
-    public void setPrice(int price) {
+    public void setPrice(double price) {
         this.price = price;
     }
 
@@ -38,6 +38,13 @@ public class Product {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public Cart toCart(){
+        Cart cart = new Cart();
+        cart.setName(this.name);
+        cart.setPrice(this.price);
+        return cart;
     }
 
     @Override

@@ -14,18 +14,15 @@ import java.util.List;
 @RestController
 public class OrderPurchaseController {
 
-    ProductOrder pfo;
+    @Autowired
+    private ProductOrder pfo;
 
     /*
      * Need to wire in our display all products Service object
      */
     @Autowired
-    DisplayProducts dp = new DisplayProducts();
+    private DisplayProducts dp;
 
-    @Autowired
-    public OrderPurchaseController() {
-        pfo = new ProductOrder();
-    }
 
     /*
      * System receives products from UI that the user would like to order -> stores
@@ -41,9 +38,20 @@ public class OrderPurchaseController {
      */
     @PostMapping("/OrderPurchase/checkOut")
     public void checkOut() {
-        pfo.checkOut();
+        System.out.println(pfo.checkOut());
+
+        //Something happens with applying discounts here
+
+
+
+        pfo.clearCart();
     }
 
+
+    /*
+    Display all products in the db, allowing the user to see each and order
+    whatever one they want
+     */
     @GetMapping("/OrderPurchase/displayAllProducts")
     public List<Product> displayAllProducts() {
         return dp.displayAll();

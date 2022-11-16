@@ -1,6 +1,6 @@
 package com.shopmanagementsystem.spring.Database.Repo;
 
-import com.shopmanagementsystem.spring.Database.DBEntity.DiscountedProduct;
+import com.shopmanagementsystem.spring.Database.DBModel.DiscountedProduct;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 

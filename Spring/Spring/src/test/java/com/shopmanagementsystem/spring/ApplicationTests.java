@@ -2,9 +2,8 @@ package com.shopmanagementsystem.spring;
 
 import com.shopmanagementsystem.spring.Database.DAO.DiscountedProductsDAO;
 import com.shopmanagementsystem.spring.Database.DAO.ProductDAO;
-import com.shopmanagementsystem.spring.Database.DBEntity.DiscountedProduct;
-import com.shopmanagementsystem.spring.Database.DBEntity.Product;
-import com.shopmanagementsystem.spring.Database.DBEntity.User;
+import com.shopmanagementsystem.spring.Database.DBModel.DiscountedProduct;
+import com.shopmanagementsystem.spring.Database.DBModel.Product;
 import com.shopmanagementsystem.spring.Database.DAO.UserDAO;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,19 +23,19 @@ class ApplicationTests {
 	@Autowired
 	private DiscountedProductsDAO discountedProductsDAO;
 
-	@Test
-	void addUser() {
-		User user = new User();
-		user.setName("jeff@gmail.com");
-		user.setPassword("max123");
-		userDAO.save(user);
-	}
+//	@Test
+//	void addUser() {
+//		User user = new User();
+//		user.setName("jeff@gmail.com");
+//		user.setPassword("max123");
+//		userDAO.save(user);
+//	}
 
-	@Test
-	void getAllUsers() {
-		List<User> users = userDAO.getAllUsers();
-		System.out.println(users);
-	}
+//	@Test
+//	void getAllUsers() {
+//		List<User> users = userDAO.getAllUsers();
+//		System.out.println(users);
+//	}
 
 	@Test
 	void getAllProducts() {

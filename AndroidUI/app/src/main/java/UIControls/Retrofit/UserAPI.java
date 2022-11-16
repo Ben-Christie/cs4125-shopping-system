@@ -2,7 +2,7 @@ package UIControls.Retrofit;
 
 import java.util.List;
 
-import UIControls.Entity.UserEntity;
+import UIControls.DTO.UserEntity;
 import retrofit2.http.Body;
 import retrofit2.http.GET;
 import retrofit2.Call;

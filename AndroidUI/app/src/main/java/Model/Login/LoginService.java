@@ -2,11 +2,8 @@ package Model.Login;
 
 import android.content.Context;
 
-import java.util.logging.Level;
-import java.util.logging.Logger;
-
 import Database.UserDatabase;
-import UIControls.Entity.UserEntity;
+import UIControls.DTO.UserEntity;
 import UIControls.Retrofit.RetrofitService;
 import UIControls.Retrofit.UserAPI;
 import retrofit2.Call;

@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.shopmanagementsystem.spring.Database.DAO.DiscountedProductsDAO;
-import com.shopmanagementsystem.spring.Database.DBEntity.DiscountedProduct;
+import com.shopmanagementsystem.spring.Database.DBModel.DiscountedProduct;
 
 @RestController
 public class DiscountController {

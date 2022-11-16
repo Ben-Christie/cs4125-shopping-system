@@ -1,7 +1,6 @@
 package com.shopmanagementsystem.spring.Database.DAO;
 
-import com.shopmanagementsystem.spring.Database.DBEntity.Product;
-import com.shopmanagementsystem.spring.Database.DBEntity.User;
+import com.shopmanagementsystem.spring.Database.DBModel.Product;
 import com.shopmanagementsystem.spring.Database.Repo.CartRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.util.Streamable;

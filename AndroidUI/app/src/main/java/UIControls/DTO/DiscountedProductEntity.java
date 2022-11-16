@@ -1,4 +1,4 @@
-package UIControls.Entity;
+package UIControls.DTO;
 
 public class DiscountedProduct {
   int id;

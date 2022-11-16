@@ -1,6 +1,6 @@
 package com.shopmanagementsystem.spring.Controllers.Rest;
 
-import com.shopmanagementsystem.spring.Database.DBEntity.Product;
+import com.shopmanagementsystem.spring.Database.DBModel.Product;
 import com.shopmanagementsystem.spring.model.Purchase.Order.DisplayProducts;
 import com.shopmanagementsystem.spring.model.Purchase.Order.ProductOrder;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -39,10 +39,6 @@ public class OrderPurchaseController {
     @PostMapping("/OrderPurchase/checkOut")
     public void checkOut() {
         System.out.println(pfo.checkOut());
-
-        //Something happens with applying discounts here
-
-
 
         pfo.clearCart();
     }

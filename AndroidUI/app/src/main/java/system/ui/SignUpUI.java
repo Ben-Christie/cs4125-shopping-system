@@ -5,22 +5,11 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
-import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
-import java.util.logging.Level;
-import java.util.logging.Logger;
-
-import Model.Login.LoginService;
-import UIControls.Entity.UserEntity;
 import UIControls.LoginController;
-import UIControls.Retrofit.RetrofitService;
-import UIControls.Retrofit.UserAPI;
-import retrofit2.Call;
-import retrofit2.Callback;
-import retrofit2.Response;
 
 public class SignUpUI extends AppCompatActivity {
     EditText editEmail, editPassword, editConfirmPassword;

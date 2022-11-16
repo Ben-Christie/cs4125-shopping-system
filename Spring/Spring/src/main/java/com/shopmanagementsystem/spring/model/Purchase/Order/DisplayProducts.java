@@ -1,7 +1,7 @@
 package com.shopmanagementsystem.spring.model.Purchase.Order;
 
 import com.shopmanagementsystem.spring.Database.DAO.ProductDAO;
-import com.shopmanagementsystem.spring.Database.DBEntity.Product;
+import com.shopmanagementsystem.spring.Database.DBModel.Product;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 

@@ -3,8 +3,8 @@ package com.shopmanagementsystem.spring.model.Discount;
 import java.util.List;
 
 import com.shopmanagementsystem.spring.Database.DAO.ProductDAO;
-import com.shopmanagementsystem.spring.Database.DBEntity.DiscountedProduct;
-import com.shopmanagementsystem.spring.Database.DBEntity.Product;
+import com.shopmanagementsystem.spring.Database.DBModel.DiscountedProduct;
+import com.shopmanagementsystem.spring.Database.DBModel.Product;
 import com.shopmanagementsystem.spring.Database.DAO.DiscountedProductsDAO;
 
 public class GoldDiscount implements IDiscountState {

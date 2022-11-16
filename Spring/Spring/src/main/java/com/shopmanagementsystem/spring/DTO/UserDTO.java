@@ -1,21 +1,10 @@
-package UIControls.Entity;
+package com.shopmanagementsystem.spring.DTO;
 
-
-public class UserEntity {
-
+public class UserDTO {
     private int id;
+    private String name;
+    private String password;
 
-    String name;
-    String password;
-
-    @Override
-    public String toString() {
-        return "User{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", password='" + password + '\'' +
-                '}';
-    }
 
     public int getId() {
         return id;

@@ -7,7 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.util.Streamable;
 import org.springframework.stereotype.Service;
 
-import com.shopmanagementsystem.spring.Database.DBEntity.DiscountedProduct;
+import com.shopmanagementsystem.spring.Database.DBModel.DiscountedProduct;
 import com.shopmanagementsystem.spring.Database.Repo.DiscountedProductRepo;
 
 @Service

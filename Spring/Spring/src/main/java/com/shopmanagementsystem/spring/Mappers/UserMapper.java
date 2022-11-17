@@ -1,4 +1,4 @@
-package com.shopmanagementsystem.spring.Converter;
+package com.shopmanagementsystem.spring.Mappers;
 
 import com.shopmanagementsystem.spring.DTO.UserDTO;
 import com.shopmanagementsystem.spring.Entity.User;
@@ -11,7 +11,7 @@ import org.springframework.stereotype.Service;
 Convert user dto <-> entity
  */
 @Service
-public class UserConverter {
+public class UserMapper implements Mapper<UserDTO,User>{
 
     @Autowired
     private ModelMapper modelMapper;
@@ -22,7 +22,7 @@ public class UserConverter {
         return userdto;
     }
 
-    public User dtoToEntity(UserDTO userDTO){
+    public User DTOToEntity(UserDTO userDTO){
         User user = new User();
         user = modelMapper.map(userDTO, User.class);
         return user;

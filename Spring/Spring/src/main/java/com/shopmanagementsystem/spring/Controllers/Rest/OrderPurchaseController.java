@@ -1,6 +1,6 @@
 package com.shopmanagementsystem.spring.Controllers.Rest;
 
-import com.shopmanagementsystem.spring.Database.DBModel.Product;
+import com.shopmanagementsystem.spring.Entity.Product;
 import com.shopmanagementsystem.spring.model.Purchase.Order.DisplayProducts;
 import com.shopmanagementsystem.spring.model.Purchase.Order.ProductOrder;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -38,8 +38,7 @@ public class OrderPurchaseController {
      */
     @PostMapping("/OrderPurchase/checkOut")
     public void checkOut() {
-        System.out.println(pfo.checkOut());
-
+        pfo.checkOut();
         pfo.clearCart();
     }
 

@@ -1,6 +1,6 @@
 package com.shopmanagementsystem.spring.Controllers.Rest;
 
-import com.shopmanagementsystem.spring.Converter.UserConverter;
+import com.shopmanagementsystem.spring.Mappers.UserMapper;
 import com.shopmanagementsystem.spring.DTO.UserDTO;
 import com.shopmanagementsystem.spring.Entity.User;
 import com.shopmanagementsystem.spring.model.User.Login;
@@ -19,7 +19,7 @@ public class UserController {
     @Autowired
     private Login login;
     @Autowired
-    private UserConverter userConverter;
+    private UserMapper userMapper;
 
     /*
     User signs up for the app, they are added to the db
@@ -27,7 +27,7 @@ public class UserController {
     @PostMapping("/User/CreateUser")
     public boolean createUser(@RequestBody UserDTO userDTO){
         //Convert UserDTO -> Entity
-        User user = userConverter.dtoToEntity(userDTO);
+        User user = userMapper.DTOToEntity(userDTO);
         return signUp.createUser(user);
     }
 
@@ -36,7 +36,7 @@ public class UserController {
      */
     @PostMapping("/User/VerifyCreds")
     public boolean verifyCreds(@RequestBody UserDTO userDTO){
-        User user = userConverter.dtoToEntity(userDTO);
+        User user = userMapper.DTOToEntity(userDTO);
         return login.verifyCreds(user);
     }
 }

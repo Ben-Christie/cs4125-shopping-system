@@ -1,6 +1,8 @@
 package com.shopmanagementsystem.spring.Database.DBModel;
 
 
+import com.shopmanagementsystem.spring.Entity.Product;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;

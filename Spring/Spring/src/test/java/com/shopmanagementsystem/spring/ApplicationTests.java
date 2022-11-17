@@ -3,12 +3,14 @@ package com.shopmanagementsystem.spring;
 import com.shopmanagementsystem.spring.Database.DAO.DiscountedProductsDAO;
 import com.shopmanagementsystem.spring.Database.DAO.ProductDAO;
 import com.shopmanagementsystem.spring.Database.DBModel.DiscountedProduct;
-import com.shopmanagementsystem.spring.Database.DBModel.Product;
+import com.shopmanagementsystem.spring.Entity.Product;
 import com.shopmanagementsystem.spring.Database.DAO.UserDAO;
+import com.shopmanagementsystem.spring.model.Points.AddPoints.AddPoints;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @SpringBootTest
@@ -43,6 +45,7 @@ class ApplicationTests {
 		System.out.println(products);
 	}
 
+
 	@Test
 	void addDiscountedProduct() {
 		DiscountedProduct discountedProduct = new DiscountedProduct("Bread", 4);
@@ -53,5 +56,33 @@ class ApplicationTests {
 	void getAllDiscountedProducts() {
 		List<DiscountedProduct> products = discountedProductsDAO.getAllDiscountedProducts();
 		System.out.println(products);
+	}
+
+
+	@Test
+	void checkPointCalculator(){
+		List<Product> products = new ArrayList<>();
+		Product eggs = new Product();
+		eggs.setName("eggs");
+		eggs.setPrice(2.50);
+
+		Product bread = new Product();
+		bread.setName("bread");
+		bread.setPrice(3.50);
+
+
+		Product salad = new Product();
+		salad.setName("salad");
+		salad.setPrice(1.30);
+
+		products.add(eggs);
+		products.add(bread);
+		products.add(salad);
+
+
+		AddPoints addPoints = new AddPoints();
+		addPoints.addPoints(products);
+
+
 	}
 }

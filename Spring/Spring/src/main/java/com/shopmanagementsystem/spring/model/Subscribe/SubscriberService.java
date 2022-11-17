@@ -13,8 +13,7 @@ public class SubscriberService {
         DigitalSubscriber ds = new DigitalSubscriber();
 
 
-        //read from the db
-
+        //Example of reading from db
         ds.subscriberType("email",systemNotify,"aaron@gmail.com");
         ds.subscriberType("text",systemNotify,"023874343");
 

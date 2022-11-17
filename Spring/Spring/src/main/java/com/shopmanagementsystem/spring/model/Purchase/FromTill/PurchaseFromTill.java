@@ -1,5 +1,9 @@
-package com.shopmanagementsystem.spring.model.Purchase;
+package com.shopmanagementsystem.spring.model.Purchase.FromTill;
 
+import com.shopmanagementsystem.spring.model.Purchase.KeepPurchase;
+import com.shopmanagementsystem.spring.model.Purchase.Purchase;
+import com.shopmanagementsystem.spring.model.Purchase.PurchaseSender;
+import com.shopmanagementsystem.spring.model.Purchase.PurchaseSubject;
 import com.shopmanagementsystem.spring.model.Purchase.Wrapper.PurchaseInformation;
 
 public class PurchaseFromTill {

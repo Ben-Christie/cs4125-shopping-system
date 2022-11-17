@@ -1,5 +1,7 @@
-package com.shopmanagementsystem.spring.Database.DBModel;
+package com.shopmanagementsystem.spring.Entity;
 
+
+import com.shopmanagementsystem.spring.Database.DBModel.Cart;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;

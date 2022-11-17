@@ -1,6 +1,6 @@
 package com.shopmanagementsystem.spring.Controllers.Rest;
 
-import com.shopmanagementsystem.spring.model.Purchase.PurchaseFromTill;
+import com.shopmanagementsystem.spring.model.Purchase.FromTill.PurchaseFromTill;
 import com.shopmanagementsystem.spring.model.Purchase.Wrapper.PurchaseInformation;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;

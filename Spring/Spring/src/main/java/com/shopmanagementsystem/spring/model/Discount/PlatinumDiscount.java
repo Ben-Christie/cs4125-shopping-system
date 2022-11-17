@@ -4,7 +4,7 @@ import java.util.List;
 
 import com.shopmanagementsystem.spring.Database.DAO.ProductDAO;
 import com.shopmanagementsystem.spring.Database.DBModel.DiscountedProduct;
-import com.shopmanagementsystem.spring.Database.DBModel.Product;
+import com.shopmanagementsystem.spring.Entity.Product;
 import com.shopmanagementsystem.spring.Database.DAO.DiscountedProductsDAO;
 
 public class PlatinumDiscount implements IDiscountState {

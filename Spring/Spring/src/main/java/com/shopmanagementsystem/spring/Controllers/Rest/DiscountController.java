@@ -6,8 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.shopmanagementsystem.spring.Database.DAO.DiscountedProductsDAO;
-import com.shopmanagementsystem.spring.Database.DBModel.DiscountedProduct;
+import com.shopmanagementsystem.spring.Entity.DiscountedProduct;
 import com.shopmanagementsystem.spring.model.Discount.DiscountService;
 
 @RestController

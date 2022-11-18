@@ -2,7 +2,7 @@ package com.shopmanagementsystem.spring;
 
 import com.shopmanagementsystem.spring.Database.DAO.DiscountedProductsDAO;
 import com.shopmanagementsystem.spring.Database.DAO.ProductDAO;
-import com.shopmanagementsystem.spring.Database.DBModel.DiscountedProduct;
+import com.shopmanagementsystem.spring.Entity.DiscountedProduct;
 import com.shopmanagementsystem.spring.Entity.Product;
 import com.shopmanagementsystem.spring.Database.DAO.UserDAO;
 import com.shopmanagementsystem.spring.model.Points.AddPoints.AddPoints;
@@ -25,26 +25,25 @@ class ApplicationTests {
 	@Autowired
 	private DiscountedProductsDAO discountedProductsDAO;
 
-//	@Test
-//	void addUser() {
-//		User user = new User();
-//		user.setName("jeff@gmail.com");
-//		user.setPassword("max123");
-//		userDAO.save(user);
-//	}
+	// @Test
+	// void addUser() {
+	// User user = new User();
+	// user.setName("jeff@gmail.com");
+	// user.setPassword("max123");
+	// userDAO.save(user);
+	// }
 
-//	@Test
-//	void getAllUsers() {
-//		List<User> users = userDAO.getAllUsers();
-//		System.out.println(users);
-//	}
+	// @Test
+	// void getAllUsers() {
+	// List<User> users = userDAO.getAllUsers();
+	// System.out.println(users);
+	// }
 
 	@Test
 	void getAllProducts() {
 		List<Product> products = productDAO.getAllProducts();
 		System.out.println(products);
 	}
-
 
 	@Test
 	void addDiscountedProduct() {
@@ -58,9 +57,8 @@ class ApplicationTests {
 		System.out.println(products);
 	}
 
-
 	@Test
-	void checkPointCalculator(){
+	void checkPointCalculator() {
 		List<Product> products = new ArrayList<>();
 		Product eggs = new Product();
 		eggs.setName("eggs");
@@ -70,7 +68,6 @@ class ApplicationTests {
 		bread.setName("bread");
 		bread.setPrice(3.50);
 
-
 		Product salad = new Product();
 		salad.setName("salad");
 		salad.setPrice(1.30);
@@ -79,10 +76,8 @@ class ApplicationTests {
 		products.add(bread);
 		products.add(salad);
 
-
 		AddPoints addPoints = new AddPoints();
 		addPoints.addPoints(products);
-
 
 	}
 }

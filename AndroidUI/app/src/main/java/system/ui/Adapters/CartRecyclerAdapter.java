@@ -11,17 +11,16 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.ArrayList;
 import java.util.List;
 
-import Database.DBEntity.IPurchaseInfoEntity;
-import Model.Purchase.IPurchaseObserver;
+
 import system.ui.R;
 
-public class CartRecyclerAdapter extends RecyclerView.Adapter<CartRecyclerAdapter.MyViewHolder> implements IPurchaseObserver{
+public class CartRecyclerAdapter extends RecyclerView.Adapter<CartRecyclerAdapter.MyViewHolder>{
 
-    private List<IPurchaseInfoEntity> purchaseInfo = new ArrayList<>();
+    private List<String> purchaseInfo = new ArrayList<>();
 
 
-    @Override
-    public void update(List<IPurchaseInfoEntity> purchaseInfo) {
+    //@Override
+    public void update(List<String> purchaseInfo) {
         this.purchaseInfo = purchaseInfo;
     }
 
@@ -54,7 +53,7 @@ public class CartRecyclerAdapter extends RecyclerView.Adapter<CartRecyclerAdapte
 
     @Override
     public void onBindViewHolder(@NonNull CartRecyclerAdapter.MyViewHolder holder, int position) {
-        holder.itemName.setText(purchaseInfo.get(position).getName());
+        holder.itemName.setText(purchaseInfo.get(position));
         /*
             Implement data for name, quantity, price and points here
             Referenced: https://www.youtube.com/watch?v=__OMnFR-wZU

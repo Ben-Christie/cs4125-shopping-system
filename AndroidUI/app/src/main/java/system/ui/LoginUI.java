@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import UIControls.LoginController;
 
@@ -29,9 +30,6 @@ public class LoginUI extends AppCompatActivity {
             if(loginController.verify(editEmail.getText().toString().trim(), editPassword.getText().toString().trim())){
 
 
-                System.out.println("login is correct");
-
-
                 //Switch to the home screen now
 
                 Intent intent = new Intent(LoginUI.this, HomeUI.class);
@@ -40,7 +38,7 @@ public class LoginUI extends AppCompatActivity {
 
 
             }else {
-                System.out.println("incorrect login");
+                Toast.makeText(LoginUI.this,"Invalid Login!", Toast.LENGTH_SHORT).show();
             }
         });
 

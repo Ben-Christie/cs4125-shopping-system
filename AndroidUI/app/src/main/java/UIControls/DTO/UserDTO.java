@@ -1,12 +1,17 @@
 package UIControls.DTO;
 
 
-public class UserEntity {
+public class UserDTO {
 
     private int id;
 
     String name;
     String password;
+
+    public UserDTO(String name, String password) {
+        this.name = name;
+        this.password = password;
+    }
 
     @Override
     public String toString() {

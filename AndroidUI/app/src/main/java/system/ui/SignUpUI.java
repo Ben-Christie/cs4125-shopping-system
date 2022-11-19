@@ -8,6 +8,7 @@ import android.text.TextWatcher;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import UIControls.LoginController;
 
@@ -27,7 +28,11 @@ public class SignUpUI extends AppCompatActivity {
 
         signUpButton.setOnClickListener(view -> {
             LoginController createAccount = new LoginController(SignUpUI.this);
-            createAccount.createAccount(editEmail.getText().toString().trim(),editPassword.getText().toString().trim());
+            if (createAccount.createAccount(editEmail.getText().toString().trim(),editPassword.getText().toString().trim())){
+                Toast.makeText(SignUpUI.this,"Account created!", Toast.LENGTH_SHORT).show();
+            }else{
+                Toast.makeText(SignUpUI.this,"Unable to create account!", Toast.LENGTH_SHORT).show();
+            }
         });
         verifyConfirmPassword();
     }

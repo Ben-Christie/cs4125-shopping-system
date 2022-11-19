@@ -3,25 +3,22 @@ package UIControls;
 
 import android.content.Context;
 
-import java.io.IOException;
-
-import Model.User.UserService;
+import Model.User.LoginService;
+import Model.User.SignUpService;
 
 public class LoginController {
-    UserService userService;
+    LoginService loginService;
+    SignUpService signUpService;
+    Context context;
 
     public LoginController(Context context){
-        userService = new UserService();
+        this.context = context;
+        loginService = new LoginService(context);
+
     }
 
     public boolean verify(String email, String password){
-
-            return userService.verifyCreds(email,password);
-
-    }
-
-    public boolean createAccount(String email, String password){
-        return userService.createAccount(email,password);
+            return loginService.verifyCreds(email,password);
     }
 
 

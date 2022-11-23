@@ -15,10 +15,10 @@ public class Discount {
 
   public Discount() {
     // initialize states
-    bronzeDiscount = new BronzeDiscount(this);
-    silverDiscount = new SilverDiscount(this);
-    goldDiscount = new GoldDiscount(this);
-    platinumDiscount = new PlatinumDiscount(this);
+    bronzeDiscount = new BronzeTier(this);
+    silverDiscount = new SilverTier(this);
+    goldDiscount = new GoldTier(this);
+    platinumDiscount = new PlatinumTier(this);
 
     discountState = bronzeDiscount;
 

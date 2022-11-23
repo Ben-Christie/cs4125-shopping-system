@@ -3,8 +3,6 @@ package com.shopmanagementsystem.spring.model.Discount;
 import com.shopmanagementsystem.spring.Entity.User;
 
 public class Discount {
-  User user;
-
   // states
   IDiscountState bronzeDiscount;
   IDiscountState silverDiscount;
@@ -13,7 +11,7 @@ public class Discount {
 
   IDiscountState discountState;
 
-  public Discount() {
+  public Discount(User user) {
     // initialize states
     bronzeDiscount = new BronzeTier(this);
     silverDiscount = new SilverTier(this);
@@ -22,11 +20,11 @@ public class Discount {
 
     discountState = bronzeDiscount;
 
-    if (user.getLoyaltyPoints() > 250) {
+    if (user.getLoyaltyPoints() > 500) {
       setDiscountState(getSilverDiscount());
-    } else if (user.getLoyaltyPoints() > 500) {
-      setDiscountState(getGoldDiscount());
     } else if (user.getLoyaltyPoints() > 1000) {
+      setDiscountState(getGoldDiscount());
+    } else if (user.getLoyaltyPoints() > 2000) {
       setDiscountState(getPlatinumDiscount());
     }
 

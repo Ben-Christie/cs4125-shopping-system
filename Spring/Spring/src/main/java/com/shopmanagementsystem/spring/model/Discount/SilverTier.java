@@ -7,13 +7,13 @@ import com.shopmanagementsystem.spring.Entity.DiscountedProduct;
 import com.shopmanagementsystem.spring.Entity.Product;
 import com.shopmanagementsystem.spring.Database.DAO.DiscountedProductsDAO;
 
-public class BronzeDiscount implements IDiscountState {
+public class SilverTier implements IDiscountState {
     ProductDAO productDAO;
     DiscountedProductsDAO discountedProductsDAO;
 
     Discount discount;
 
-    public BronzeDiscount(Discount discount) {
+    public SilverTier(Discount discount) {
         this.discount = discount;
     }
 
@@ -21,9 +21,9 @@ public class BronzeDiscount implements IDiscountState {
     public int[] getDiscountRange() {
         int[] range = new int[2];
 
-        // 1 - 5%
-        int min = 1;
-        int max = 5;
+        // 6 - 10%
+        int min = 6;
+        int max = 10;
 
         range[0] = min;
         range[1] = max;

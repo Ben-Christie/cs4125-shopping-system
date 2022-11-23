@@ -7,13 +7,13 @@ import com.shopmanagementsystem.spring.Entity.DiscountedProduct;
 import com.shopmanagementsystem.spring.Entity.Product;
 import com.shopmanagementsystem.spring.Database.DAO.DiscountedProductsDAO;
 
-public class GoldDiscount implements IDiscountState {
+public class GoldTier implements IDiscountState {
     ProductDAO productDAO;
     DiscountedProductsDAO discountedProductsDAO;
 
     Discount discount;
 
-    public GoldDiscount(Discount discount) {
+    public GoldTier(Discount discount) {
         this.discount = discount;
     }
 

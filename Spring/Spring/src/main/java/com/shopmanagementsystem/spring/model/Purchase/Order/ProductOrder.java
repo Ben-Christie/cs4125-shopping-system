@@ -2,6 +2,10 @@ package com.shopmanagementsystem.spring.model.Purchase.Order;
 
 import com.shopmanagementsystem.spring.Database.DAO.CartDAO;
 import com.shopmanagementsystem.spring.Entity.Product;
+import com.shopmanagementsystem.spring.model.Checkout.Checkout;
+import com.shopmanagementsystem.spring.model.Checkout.CheckoutOrder;
+import com.shopmanagementsystem.spring.model.Checkout.Receipt;
+import com.shopmanagementsystem.spring.model.Checkout.withDiscount;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -22,10 +26,17 @@ public class ProductOrder {
         cartDAO.clearCart();
     }
 
-    public List<Product> checkOut(){
+    public Receipt checkOut(){
 
-        //Possibly put logic for applying discount here
-        return cartDAO.getCart();
+        Checkout checkout = new CheckoutOrder();
+
+        //if - user has discounts active
+        if (false){
+            return checkout.getReceipt();
+        }else{
+            checkout = new withDiscount(checkout);
+            return checkout.getReceipt();
+        }
     }
 
 

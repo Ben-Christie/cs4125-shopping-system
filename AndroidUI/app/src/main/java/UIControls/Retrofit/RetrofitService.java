@@ -15,7 +15,7 @@ public class RetrofitService {
     private void initializeRetrofit() {
         retrofit = new Retrofit.Builder()
                                 //IPv4 Address:Port the server is running on
-                .baseUrl("http://LocalHostIP:PortNumber")
+                .baseUrl("http://192.168.15.185:8080")
                 .addConverterFactory(GsonConverterFactory.create(new Gson()))
                 .build();
     }

@@ -1,10 +1,10 @@
 package com.shopmanagementsystem.spring.model.Purchase.FromTill;
 
-import com.shopmanagementsystem.spring.model.Purchase.KeepPurchase;
-import com.shopmanagementsystem.spring.model.Purchase.Purchase;
 import com.shopmanagementsystem.spring.model.Purchase.PurchaseSender;
 import com.shopmanagementsystem.spring.model.Purchase.PurchaseSubject;
 import com.shopmanagementsystem.spring.model.Purchase.Wrapper.PurchaseInformation;
+import com.shopmanagementsystem.spring.model.Purchase.KeepPurchase;
+import com.shopmanagementsystem.spring.model.Purchase.Purchase;
 
 public class PurchaseFromTill {
     PurchaseSubject purchaseSubject;

@@ -26,8 +26,8 @@ public class CartDAO {
     public List<Product> getCart(){
         List<Product> products = new ArrayList<>();
         Streamable.of(cartRepo.findAll())
-                .forEach(user -> {
-                    products.add(user.toProduct());
+                .forEach(product -> {
+                    products.add(product.toProduct());
                 });
         return products;
     }

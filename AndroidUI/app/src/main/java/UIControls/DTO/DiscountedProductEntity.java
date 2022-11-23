@@ -1,11 +1,11 @@
 package UIControls.DTO;
 
-public class DiscountedProduct {
+public class DiscountedProductEntity {
   int id;
   String name;
   int discountAvailable;
 
-  public DiscountedProduct(String name, int discountAvailable) {
+  public DiscountedProductEntity(String name, int discountAvailable) {
     this.name = name;
     this.discountAvailable = discountAvailable;
   }

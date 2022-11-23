@@ -4,7 +4,6 @@ import android.content.Context;
 
 import java.util.List;
 
-import Database.ProductDatabase;
 import Model.Purchase.Order.DisplayProducts;
 import Model.Purchase.Order.OrderProduct;
 import Model.Purchase.Order.ProductEntity;

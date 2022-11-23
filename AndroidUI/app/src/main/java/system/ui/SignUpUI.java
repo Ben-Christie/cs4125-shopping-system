@@ -8,26 +8,28 @@ import android.text.TextWatcher;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import UIControls.LoginController;
+import UIControls.SignUpController;
 
 public class SignUpUI extends AppCompatActivity {
     EditText editEmail, editPassword, editConfirmPassword;
     Button signUpButton;
     TextView toLogin;
+    SignUpController signUpController;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_up_ui);
-
+        signUpController = new SignUpController(SignUpUI.this);
         createObjects();
         signUpButton.setEnabled(false);
 
         signUpButton.setOnClickListener(view -> {
-            LoginController createAccount = new LoginController(SignUpUI.this);
-            createAccount.createAccount(editEmail.getText().toString().trim(),editPassword.getText().toString().trim());
+            signUpController.createAccount(editEmail.getText().toString().trim(),editPassword.getText().toString().trim());
         });
         verifyConfirmPassword();
     }

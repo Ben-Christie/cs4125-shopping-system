@@ -1,18 +1,14 @@
 package UIControls.Retrofit;
 
-import java.util.List;
-
-import UIControls.DTO.UserEntity;
+import UIControls.DTO.UserDTO;
 import retrofit2.http.Body;
-import retrofit2.http.GET;
 import retrofit2.Call;
 import retrofit2.http.POST;
 
 public interface UserAPI {
-
-    @GET("/Database/get-all")
-    Call<List<UserEntity>> getAllUsers();
+    @POST("/User/VerifyCreds")
+    Call<Boolean> veriftyCreds(@Body UserDTO userDTO);
 
     @POST("/User/CreateUser")
-    Call<Boolean> save(@Body UserEntity userEntity);
+    Call<Boolean> save(@Body UserDTO userDTO);
 }

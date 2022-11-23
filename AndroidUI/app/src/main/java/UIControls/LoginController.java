@@ -3,21 +3,22 @@ package UIControls;
 
 import android.content.Context;
 
-import Model.Login.LoginService;
+import Model.User.LoginService;
+import Model.User.SignUpService;
 
 public class LoginController {
     LoginService loginService;
+    SignUpService signUpService;
+    Context context;
 
     public LoginController(Context context){
+        this.context = context;
         loginService = new LoginService(context);
+
     }
 
     public boolean verify(String email, String password){
-        return loginService.verifyCreds(email,password);
-    }
-
-    public boolean createAccount(String email, String password){
-        return loginService.createAccount(email,password);
+            return loginService.verifyCreds(email,password);
     }
 
 

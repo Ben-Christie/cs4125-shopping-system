@@ -1,12 +1,21 @@
 package UIControls;
 
-import Model.Login.SignUpService;
+import android.content.Context;
+
+import Model.User.LoginService;
+import Model.User.SignUpService;
 
 public class SignUpController {
-    SignUpService signUpService = new SignUpService();
+    SignUpService signUpService;
+    Context context;
 
-    public boolean verify(String username, String password, String confirmPassword) {
-        return signUpService.emailNotInDb(username) &&
-                signUpService.comparePasswords(password, confirmPassword);
+
+    public SignUpController(Context context){
+        this.context = context;
+        signUpService = new SignUpService(context);
+
+    }
+    public void createAccount(String email, String password){
+        signUpService.createAccount(email,password);
     }
 }

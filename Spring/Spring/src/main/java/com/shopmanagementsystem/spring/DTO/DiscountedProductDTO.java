@@ -4,6 +4,7 @@ public class DiscountedProductDTO {
   int id;
   String name;
   int discountAvailable;
+  boolean isActive;
 
   public int getId() {
     return id;
@@ -27,5 +28,13 @@ public class DiscountedProductDTO {
 
   public void setDiscountAvailable(int discountAvailable) {
     this.discountAvailable = discountAvailable;
+  }
+
+  public boolean getIsActive() {
+    return this.isActive;
+  }
+
+  public void setIsActive(boolean isActive) {
+    this.isActive = isActive;
   }
 }

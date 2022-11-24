@@ -7,7 +7,7 @@ import com.shopmanagementsystem.spring.Entity.DiscountedProduct;
 import com.shopmanagementsystem.spring.Entity.Product;
 import com.shopmanagementsystem.spring.Database.DAO.DiscountedProductsDAO;
 
-public class BronzeTier implements IDiscountState {
+public class BronzeTier implements ITierState {
     ProductDAO productDAO;
     DiscountedProductsDAO discountedProductsDAO;
 

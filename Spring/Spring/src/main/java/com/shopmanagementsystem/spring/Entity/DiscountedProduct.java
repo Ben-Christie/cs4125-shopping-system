@@ -12,10 +12,12 @@ public class DiscountedProduct {
     int id;
     String name;
     int discountAvailable;
+    boolean isActive;
 
     public DiscountedProduct(String name, int discountAvailable) {
         this.name = name;
         this.discountAvailable = discountAvailable;
+        this.isActive = false;
     }
 
     public int getId() {
@@ -40,6 +42,14 @@ public class DiscountedProduct {
 
     public void setDiscountAvailable(int discountAvailable) {
         this.discountAvailable = discountAvailable;
+    }
+
+    public boolean getIsActive() {
+        return this.isActive;
+    }
+
+    public void setIsActive(boolean isActive) {
+        this.isActive = isActive;
     }
 
     @Override

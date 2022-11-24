@@ -4,53 +4,53 @@ import com.shopmanagementsystem.spring.Entity.User;
 
 public class Discount {
   // states
-  IDiscountState bronzeDiscount;
-  IDiscountState silverDiscount;
-  IDiscountState goldDiscount;
-  IDiscountState platinumDiscount;
+  ITierState bronzeTier;
+  ITierState silverTier;
+  ITierState goldTier;
+  ITierState platinumTier;
 
-  IDiscountState discountState;
+  ITierState tierState;
 
   public Discount(User user) {
     // initialize states
-    bronzeDiscount = new BronzeTier(this);
-    silverDiscount = new SilverTier(this);
-    goldDiscount = new GoldTier(this);
-    platinumDiscount = new PlatinumTier(this);
+    bronzeTier = new BronzeTier(this);
+    silverTier = new SilverTier(this);
+    goldTier = new GoldTier(this);
+    platinumTier = new PlatinumTier(this);
 
-    discountState = bronzeDiscount;
+    tierState = bronzeTier;
 
     if (user.getLoyaltyPoints() > 500) {
-      setDiscountState(getSilverDiscount());
+      setTierState(getSilverTier());
     } else if (user.getLoyaltyPoints() > 1000) {
-      setDiscountState(getGoldDiscount());
+      setTierState(getGoldTier());
     } else if (user.getLoyaltyPoints() > 2000) {
-      setDiscountState(getPlatinumDiscount());
+      setTierState(getPlatinumTier());
     }
 
   }
 
-  public void setDiscountState(IDiscountState discountState) {
-    this.discountState = discountState;
+  public void setTierState(ITierState tierState) {
+    this.tierState = tierState;
   }
 
-  public IDiscountState getDiscountState() {
-    return this.discountState;
+  public ITierState getTierState() {
+    return this.tierState;
   }
 
-  public IDiscountState getBronzeDiscount() {
-    return this.bronzeDiscount;
+  public ITierState getBronzeTier() {
+    return this.bronzeTier;
   }
 
-  public IDiscountState getSilverDiscount() {
-    return this.silverDiscount;
+  public ITierState getSilverTier() {
+    return this.silverTier;
   }
 
-  public IDiscountState getGoldDiscount() {
-    return this.goldDiscount;
+  public ITierState getGoldTier() {
+    return this.goldTier;
   }
 
-  public IDiscountState getPlatinumDiscount() {
-    return this.platinumDiscount;
+  public ITierState getPlatinumTier() {
+    return this.platinumTier;
   }
 }

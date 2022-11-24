@@ -18,6 +18,7 @@ public class ProductOrder {
     CartDAO cartDAO;
 
 
+
     public void addToCart(Product p){
         cartDAO.addProduct(p);
     }
@@ -28,7 +29,9 @@ public class ProductOrder {
 
     public Receipt checkOut(){
 
+
         Checkout checkout = new CheckoutOrder();
+        checkout.loadCart(cartDAO.getCart());
 
         //if - user has discounts active
         if (false){

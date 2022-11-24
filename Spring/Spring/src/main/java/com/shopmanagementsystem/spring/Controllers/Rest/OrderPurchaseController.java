@@ -37,9 +37,10 @@ public class OrderPurchaseController {
      * User clicks checkout, all items in their cart are checked out
      */
     @PostMapping("/OrderPurchase/checkOut")
-    public void checkOut() {
-        pfo.checkOut();
-        pfo.clearCart();
+    public String checkOut() {
+        String receipt = pfo.checkOut().formatedReceipt();
+        //pfo.clearCart();
+        return receipt;
     }
 
 

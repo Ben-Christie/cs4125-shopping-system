@@ -6,9 +6,6 @@ public class CheckoutOrder extends Checkout{
 
     @Override
     public Receipt getReceipt() {
-        getCart();
-
-
         //Add each element from the cart to the receipt
         Receipt receipt = new Receipt();
         for(Product p : cart){

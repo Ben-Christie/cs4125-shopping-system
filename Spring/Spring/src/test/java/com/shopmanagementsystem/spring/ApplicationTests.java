@@ -1,10 +1,14 @@
 package com.shopmanagementsystem.spring;
 
+import com.shopmanagementsystem.spring.Database.DAO.CartDAO;
 import com.shopmanagementsystem.spring.Database.DAO.DiscountedProductsDAO;
 import com.shopmanagementsystem.spring.Database.DAO.ProductDAO;
 import com.shopmanagementsystem.spring.Entity.DiscountedProduct;
 import com.shopmanagementsystem.spring.Entity.Product;
 import com.shopmanagementsystem.spring.Database.DAO.UserDAO;
+import com.shopmanagementsystem.spring.Entity.User;
+import com.shopmanagementsystem.spring.model.Checkout.Checkout;
+import com.shopmanagementsystem.spring.model.Checkout.CheckoutOrder;
 import com.shopmanagementsystem.spring.model.Points.AddPoints.AddPoints;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,6 +29,9 @@ class ApplicationTests {
 	@Autowired
 	private DiscountedProductsDAO discountedProductsDAO;
 
+	@Autowired
+	private Checkout checkout;
+
 	// @Test
 	// void addUser() {
 	// User user = new User();
@@ -33,11 +40,11 @@ class ApplicationTests {
 	// userDAO.save(user);
 	// }
 
-	// @Test
-	// void getAllUsers() {
-	// List<User> users = userDAO.getAllUsers();
-	// System.out.println(users);
-	// }
+	 @Test
+	 void getAllUsers() {
+	 List<User> users = userDAO.getAllUsers();
+	 System.out.println(users);
+	 }
 
 	@Test
 	void getAllProducts() {
@@ -78,6 +85,16 @@ class ApplicationTests {
 
 		AddPoints addPoints = new AddPoints();
 		addPoints.addPoints(products);
+
+	}
+
+
+
+	@Autowired
+	private CartDAO cartDAO;
+	@Test
+	void checkOutDecoratorCheck(){
+		System.out.println(cartDAO.getCart());
 
 	}
 }

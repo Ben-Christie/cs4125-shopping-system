@@ -4,7 +4,9 @@ import com.shopmanagementsystem.spring.DTO.ProductDTO;
 import com.shopmanagementsystem.spring.Entity.Product;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
+@Service
 public class ProductMapper implements Mapper<ProductDTO, Product>{
 
     @Autowired

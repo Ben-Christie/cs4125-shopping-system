@@ -41,7 +41,7 @@ public class withDiscount extends CheckoutDecorator{
 
 
 
-        DiscountedProduct d1 = new DiscountedProduct("grapes",5);
+        DiscountedProduct d1 = new DiscountedProduct("eggs",5);
 
 
         ///////////////////////////////////////////////////////////////////////////////////----

@@ -33,4 +33,9 @@ public class DiscountedProductsDAO {
 
         return discountedProductList;
     }
+
+    public void activateDiscount(DiscountedProduct discountedProduct) {
+        DiscountedProduct product = repository.findById(discountedProduct.getId()).orElseThrow();
+        product.setIsActive(true);
+    }
 }

@@ -16,4 +16,8 @@ public class DiscountService {
   public List<DiscountedProduct> getDiscountedProducts() {
     return discountedProductsDAO.getAllDiscountedProducts();
   }
+
+  public void activateDiscount(DiscountedProduct discountedProduct) {
+    discountedProductsDAO.activateDiscount(discountedProduct);
+  }
 }

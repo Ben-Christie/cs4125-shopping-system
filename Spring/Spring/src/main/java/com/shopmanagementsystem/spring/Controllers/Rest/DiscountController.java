@@ -32,7 +32,7 @@ public class DiscountController {
   public void activateDiscount(@RequestBody DiscountedProductDTO discountedProductDTO) {
     // Convert DTO -> Entity
     DiscountedProduct discountedProduct = discountedProductMapper.DTOToEntity(discountedProductDTO);
-    // update isActive
-    //
+    // activate the discount
+    discountService.activateDiscount(discountedProduct);
   }
 }

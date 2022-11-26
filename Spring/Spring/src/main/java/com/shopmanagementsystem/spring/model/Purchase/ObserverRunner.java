@@ -8,7 +8,7 @@ public class ObserverRunner {
     PurchaseSubject purchaseSubject;
     public ObserverRunner(){
         purchaseSubject = new PurchaseSubject();
-        Purchase p = new Purchase(purchaseSubject);
+        PurchasePoints p = new PurchasePoints(purchaseSubject);
         KeepPurchase kp = new KeepPurchase(purchaseSubject);
         Analytics analytics = new Analytics(purchaseSubject);
     }

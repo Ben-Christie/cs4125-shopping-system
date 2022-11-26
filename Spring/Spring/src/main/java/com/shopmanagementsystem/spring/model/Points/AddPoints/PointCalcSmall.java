@@ -20,7 +20,6 @@ public class PointCalcSmall extends PointsCalcChain{
                 points += (int)p.getPrice() * BusinessVariables.SMALLPURCHASE_MULT;
             }
             return points;
-
         }
 
     }

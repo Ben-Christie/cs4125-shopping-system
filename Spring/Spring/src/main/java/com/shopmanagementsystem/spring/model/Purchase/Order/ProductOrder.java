@@ -2,14 +2,10 @@ package com.shopmanagementsystem.spring.model.Purchase.Order;
 
 import com.shopmanagementsystem.spring.Database.DAO.CartDAO;
 import com.shopmanagementsystem.spring.Entity.Product;
-import com.shopmanagementsystem.spring.model.Checkout.Checkout;
-import com.shopmanagementsystem.spring.model.Checkout.CheckoutOrder;
-import com.shopmanagementsystem.spring.model.Checkout.Receipt;
-import com.shopmanagementsystem.spring.model.Checkout.withDiscount;
+import com.shopmanagementsystem.spring.model.Checkout.*;
+import com.shopmanagementsystem.spring.model.Checkout.AlternativeDecorator.withDiscount;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
-import java.util.List;
 
 @Service
 public class ProductOrder {
@@ -37,7 +33,7 @@ public class ProductOrder {
         if (false){
             return checkout.getReceipt();
         }else{
-            checkout = new withDiscount(checkout);
+            checkout = new withMeatDiscount(new withFruitDiscount(checkout));
             return checkout.getReceipt();
         }
     }

@@ -7,9 +7,11 @@ import com.shopmanagementsystem.spring.Entity.DiscountedProduct;
 import com.shopmanagementsystem.spring.Entity.Product;
 import com.shopmanagementsystem.spring.Database.DAO.UserDAO;
 import com.shopmanagementsystem.spring.Entity.User;
+import com.shopmanagementsystem.spring.model.Analytics.Analytics;
 import com.shopmanagementsystem.spring.model.Checkout.Checkout;
 import com.shopmanagementsystem.spring.model.Checkout.CheckoutOrder;
 import com.shopmanagementsystem.spring.model.Points.AddPoints.AddPoints;
+import com.shopmanagementsystem.spring.model.Purchase.PurchaseSubject;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -29,8 +31,8 @@ class ApplicationTests {
 	@Autowired
 	private DiscountedProductsDAO discountedProductsDAO;
 
-	@Autowired
-	private Checkout checkout;
+//	@Autowired
+//	private Checkout checkout;
 
 	// @Test
 	// void addUser() {
@@ -56,6 +58,16 @@ class ApplicationTests {
 	void addDiscountedProduct() {
 		DiscountedProduct discountedProduct = new DiscountedProduct("Bread", 4);
 		discountedProductsDAO.save(discountedProduct);
+	}
+
+	@Test
+	void testComposite(){
+		 PurchaseSubject ps = new PurchaseSubject();
+		 Analytics analytics = new Analytics(ps);
+
+		 ps.notifyAllObservers();
+		System.out.println(analytics.allProducts());
+		System.out.println(analytics.fruitAndVeg());
 	}
 
 	@Test

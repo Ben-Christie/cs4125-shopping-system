@@ -5,12 +5,12 @@ import com.shopmanagementsystem.spring.Entity.DiscountedProduct;
 import java.util.ArrayList;
 import java.util.List;
 
-public class withDiscount extends CheckoutDecorator{
+public class withMeatDiscount extends CheckoutDecorator{
 
     List<DiscountedProduct> discountedProducts;
     Checkout checkout;
 
-    public withDiscount(Checkout checkout){
+    public withMeatDiscount(Checkout checkout){
         this.checkout = checkout;
     }
 
@@ -23,7 +23,7 @@ public class withDiscount extends CheckoutDecorator{
 
         //Apply discounts where and if nesscary
         for(DiscountedProduct d : discountedProducts){
-            String newDescription = d.getName() + " discount of " + d.getDiscountAvailable() + "%";
+            String newDescription = d.getName() + " --- MEAT discount of --- " + d.getDiscountAvailable() + "%";
             double newPrice = newReceipt.getPrice(d.getName()) * (100 - d.getDiscountAvailable())/100;
             double roundedNewPrice = Math.round(newPrice);
             newReceipt.updateElement(d.getName(),newDescription, roundedNewPrice);
@@ -32,25 +32,17 @@ public class withDiscount extends CheckoutDecorator{
     }
 
 
-    //Get all the users active discounts
+    //Get all active Meat discounts the user has
     private void getDiscounts(){
-        //Comming from the db
-        //Need update when active discount is implemented
+        //Coming from the db activeMeatDiscounts table
+
+        //-----------------Example-------------------------------------
         List<DiscountedProduct> discounts = new ArrayList<>();
-        DiscountedProduct d = new DiscountedProduct("bread",12);
-
-
-
-        DiscountedProduct d1 = new DiscountedProduct("eggs",5);
-
-
-        ///////////////////////////////////////////////////////////////////////////////////----
-
-
+        DiscountedProduct d = new DiscountedProduct("chicken",12);
+        DiscountedProduct d1 = new DiscountedProduct("burger",5);
         discounts.add(d);
         discounts.add(d1);
-
-
+        //--------------------------------------------------------------
         this.discountedProducts = discounts;
     }
 }

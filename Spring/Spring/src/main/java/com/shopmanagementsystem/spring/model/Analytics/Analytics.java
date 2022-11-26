@@ -1,9 +1,8 @@
 package com.shopmanagementsystem.spring.model.Analytics;
 
-import com.shopmanagementsystem.spring.Entity.Product;
+import com.shopmanagementsystem.spring.model.Checkout.Receipt;
 import com.shopmanagementsystem.spring.model.Purchase.IPurchaseObserver;
 import com.shopmanagementsystem.spring.model.Purchase.IPurchaseSubject;
-import com.shopmanagementsystem.spring.model.Purchase.Wrapper.PurchaseInformation;
 
 public class Analytics implements IPurchaseObserver {
 
@@ -21,7 +20,7 @@ public class Analytics implements IPurchaseObserver {
     }
 
     @Override
-    public void update(PurchaseInformation purchaseInformation) {
+    public void update(Receipt receipt) {
         parseRecipt();
     }
 

@@ -1,7 +1,7 @@
 package com.shopmanagementsystem.spring.model.Purchase;
 
-import com.shopmanagementsystem.spring.model.Purchase.Wrapper.PurchaseInformation;
+import com.shopmanagementsystem.spring.model.Checkout.Receipt;
 
 public interface IPurchaseObserver {
-    void update(PurchaseInformation purchaseInformation);
+    void update(Receipt receipt);
 }

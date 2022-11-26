@@ -1,13 +1,13 @@
 package com.shopmanagementsystem.spring.model.Purchase;
 
-import com.shopmanagementsystem.spring.model.Purchase.Wrapper.PurchaseInformation;
+import com.shopmanagementsystem.spring.model.Checkout.Receipt;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class PurchaseSubject implements IPurchaseSubject{
     private List<IPurchaseObserver> observers = new ArrayList<>();
-    private PurchaseInformation purchaseInformation;
+    private Receipt receipt;
 
 
     @Override
@@ -27,12 +27,12 @@ public class PurchaseSubject implements IPurchaseSubject{
     @Override
     public void notifyAllObservers() {
         for (IPurchaseObserver o : observers){
-            o.update(purchaseInformation);
+            o.update(receipt);
         }
     }
 
-    public void receivePurchaseInfo(PurchaseInformation purchaseInfo){
-        this.purchaseInformation = purchaseInfo;
+    public void receivePurchaseInfo(Receipt receipt){
+        this.receipt = receipt;
         notifyAllObservers();
     }
 }

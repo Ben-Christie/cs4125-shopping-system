@@ -7,10 +7,9 @@ import java.util.List;
 
 public class withFruitDiscount extends CheckoutDecorator{
     List<DiscountedProduct> discountedProducts;
-    Checkout checkout;
 
     public withFruitDiscount(Checkout checkout){
-        this.checkout = checkout;
+        super(checkout);
     }
 
 
@@ -31,7 +30,7 @@ public class withFruitDiscount extends CheckoutDecorator{
     }
 
 
-    //Get all active Meat discounts the user has
+    //Get all active fruit discounts the user has
     private void getDiscounts(){
         //Coming from the db activeMeatDiscounts table
 

@@ -11,10 +11,10 @@ import java.util.List;
 public class withDiscount extends CheckoutDecorator {
 
     List<DiscountedProduct> discountedProducts;
-    Checkout checkout;
+
 
     public withDiscount(Checkout checkout){
-        this.checkout = checkout;
+        super(checkout);
     }
 
 

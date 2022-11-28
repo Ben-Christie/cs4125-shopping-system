@@ -36,17 +36,15 @@ public class ProductOrder {
         checkout.loadCart(cartDAO.getCart());
 
         //if - user has discounts active
-        Receipt receipt = new Receipt();
+        Receipt receipt;
         if (false){
             receipt = checkout.getReceipt();
         }else{
             checkout = new withMeatDiscount(new withFruitDiscount(checkout));
             receipt = checkout.getReceipt();
         }
-
         //Run our observer
         observerRunner.purchaseUpdate(receipt);
-
         return receipt;
 
     }

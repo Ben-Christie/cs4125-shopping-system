@@ -8,10 +8,9 @@ import java.util.List;
 public class withMeatDiscount extends CheckoutDecorator{
 
     List<DiscountedProduct> discountedProducts;
-    Checkout checkout;
 
     public withMeatDiscount(Checkout checkout){
-        this.checkout = checkout;
+        super(checkout);
     }
 
 

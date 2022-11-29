@@ -23,4 +23,8 @@ public class SubscriberService {
 
     }
 
+    public void addSubscriber(){
+        //add subscriber to database
+    }
+
 }

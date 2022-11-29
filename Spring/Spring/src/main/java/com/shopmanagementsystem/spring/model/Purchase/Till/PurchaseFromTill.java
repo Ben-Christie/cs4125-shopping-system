@@ -1,4 +1,4 @@
-package com.shopmanagementsystem.spring.model.Purchase.FromTill;
+package com.shopmanagementsystem.spring.model.Purchase.Till;
 
 import com.shopmanagementsystem.spring.model.Checkout.Receipt;
 import com.shopmanagementsystem.spring.model.Purchase.ObserverRunner;

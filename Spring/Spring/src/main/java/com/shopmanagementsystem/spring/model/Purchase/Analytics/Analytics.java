@@ -1,4 +1,4 @@
-package com.shopmanagementsystem.spring.model.Analytics;
+package com.shopmanagementsystem.spring.model.Purchase.Analytics;
 
 import com.shopmanagementsystem.spring.model.Checkout.Receipt;
 import com.shopmanagementsystem.spring.model.Purchase.IPurchaseObserver;

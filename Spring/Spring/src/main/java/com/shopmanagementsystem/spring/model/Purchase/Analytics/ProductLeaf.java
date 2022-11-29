@@ -1,4 +1,4 @@
-package com.shopmanagementsystem.spring.model.Analytics;
+package com.shopmanagementsystem.spring.model.Purchase.Analytics;
 
 public class ProductLeaf implements Component{
     double price;

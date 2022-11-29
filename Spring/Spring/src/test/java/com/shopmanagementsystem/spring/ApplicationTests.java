@@ -1,5 +1,6 @@
 package com.shopmanagementsystem.spring;
 
+import com.shopmanagementsystem.spring.Controllers.Rest.UserController;
 import com.shopmanagementsystem.spring.Database.DAO.CartDAO;
 import com.shopmanagementsystem.spring.Database.DAO.DiscountedProductsDAO;
 import com.shopmanagementsystem.spring.Database.DAO.ProductDAO;
@@ -7,11 +8,10 @@ import com.shopmanagementsystem.spring.Entity.DiscountedProduct;
 import com.shopmanagementsystem.spring.Entity.Product;
 import com.shopmanagementsystem.spring.Database.DAO.UserDAO;
 import com.shopmanagementsystem.spring.Entity.User;
-import com.shopmanagementsystem.spring.model.Analytics.Analytics;
-import com.shopmanagementsystem.spring.model.Checkout.Checkout;
-import com.shopmanagementsystem.spring.model.Checkout.CheckoutOrder;
+import com.shopmanagementsystem.spring.model.Purchase.Analytics.Analytics;
 import com.shopmanagementsystem.spring.model.Points.AddPoints.AddPoints;
 import com.shopmanagementsystem.spring.model.Purchase.PurchaseSubject;
+import com.shopmanagementsystem.spring.model.User.SignUp;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -31,16 +31,40 @@ class ApplicationTests {
 	@Autowired
 	private DiscountedProductsDAO discountedProductsDAO;
 
-//	@Autowired
-//	private Checkout checkout;
+	@Autowired
+	private UserController userController;
 
-	// @Test
-	// void addUser() {
-	// User user = new User();
-	// user.setName("jeff@gmail.com");
-	// user.setPassword("max123");
-	// userDAO.save(user);
-	// }
+	@Test
+	void testUserServices(){
+		//Create a new user
+		int random = (int)(Math.random()*1e5);
+		String email = "newuser" + random + "@gmail.com";
+		User newUser = new User();
+		newUser.setName(email);
+		newUser.setPassword("password");
+
+		SignUp signUp = new SignUp();
+		boolean userCreated = signUp.createUser(newUser);
+	}
+
+
+	void testUser(){
+		//Create a new user
+		int random = (int)(Math.random()*1e5);
+		String email = "newuser" + random + "@gmail.com";
+		User newUser = new User();
+		newUser.setName(email);
+		newUser.setPassword("password");
+		userDAO.save(newUser);
+
+
+
+	}
+
+	@Test
+	void verifyUser(){
+
+	}
 
 	 @Test
 	 void getAllUsers() {

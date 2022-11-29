@@ -1,6 +1,6 @@
 package com.shopmanagementsystem.spring.model.Purchase;
 
-import com.shopmanagementsystem.spring.model.Analytics.Analytics;
+import com.shopmanagementsystem.spring.model.Purchase.Analytics.Analytics;
 import com.shopmanagementsystem.spring.model.Checkout.Receipt;
 
 public class ObserverRunner {

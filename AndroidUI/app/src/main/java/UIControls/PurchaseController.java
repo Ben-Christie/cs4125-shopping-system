@@ -15,7 +15,5 @@ public class PurchaseController {
     Receive purchase info from the till and notify all observers
      */
     public void receivePurchaseFromTill(){
-
-
     }
 }

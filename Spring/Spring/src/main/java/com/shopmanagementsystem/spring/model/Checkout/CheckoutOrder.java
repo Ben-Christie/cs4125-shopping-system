@@ -1,6 +1,7 @@
 package com.shopmanagementsystem.spring.model.Checkout;
 
 import com.shopmanagementsystem.spring.Entity.Product;
+import com.shopmanagementsystem.spring.Entity.Receipt;
 
 public class CheckoutOrder extends Checkout{
 

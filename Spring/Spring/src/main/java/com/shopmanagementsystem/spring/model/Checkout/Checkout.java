@@ -1,9 +1,7 @@
 package com.shopmanagementsystem.spring.model.Checkout;
 
-import com.shopmanagementsystem.spring.Database.DAO.CartDAO;
 import com.shopmanagementsystem.spring.Entity.Product;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
+import com.shopmanagementsystem.spring.Entity.Receipt;
 
 import java.util.List;
 

@@ -2,8 +2,8 @@ package com.shopmanagementsystem.spring.model.Purchase.Order;
 
 import com.shopmanagementsystem.spring.Database.DAO.CartDAO;
 import com.shopmanagementsystem.spring.Entity.Product;
+import com.shopmanagementsystem.spring.Entity.Receipt;
 import com.shopmanagementsystem.spring.model.Checkout.*;
-import com.shopmanagementsystem.spring.model.Checkout.AlternativeDecorator.withDiscount;
 import com.shopmanagementsystem.spring.model.Purchase.ObserverRunner;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

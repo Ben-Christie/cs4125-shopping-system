@@ -1,4 +1,4 @@
-package com.shopmanagementsystem.spring.model.Checkout;
+package com.shopmanagementsystem.spring.Entity;
 
 import com.shopmanagementsystem.spring.Entity.Product;
 

@@ -3,7 +3,7 @@ package com.shopmanagementsystem.spring.model.Checkout.AlternativeDecorator;
 import com.shopmanagementsystem.spring.Entity.DiscountedProduct;
 import com.shopmanagementsystem.spring.model.Checkout.Checkout;
 import com.shopmanagementsystem.spring.model.Checkout.CheckoutDecorator;
-import com.shopmanagementsystem.spring.model.Checkout.Receipt;
+import com.shopmanagementsystem.spring.Entity.Receipt;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -2,7 +2,7 @@ package com.shopmanagementsystem.spring.Controllers.Rest;
 
 import com.shopmanagementsystem.spring.DTO.ReceiptDTO;
 import com.shopmanagementsystem.spring.Mappers.ReceiptMapper;
-import com.shopmanagementsystem.spring.model.Checkout.Receipt;
+import com.shopmanagementsystem.spring.Entity.Receipt;
 import com.shopmanagementsystem.spring.model.Purchase.Till.PurchaseFromTill;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;

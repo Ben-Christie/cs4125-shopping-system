@@ -1,7 +1,7 @@
 package com.shopmanagementsystem.spring.Mappers;
 
 import com.shopmanagementsystem.spring.DTO.ReceiptDTO;
-import com.shopmanagementsystem.spring.model.Checkout.Receipt;
+import com.shopmanagementsystem.spring.Entity.Receipt;
 
 public class ReceiptMapper implements Mapper<ReceiptDTO, Receipt>{
 

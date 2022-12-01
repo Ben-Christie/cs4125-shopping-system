@@ -1,6 +1,7 @@
 package com.shopmanagementsystem.spring.model.Checkout;
 
 import com.shopmanagementsystem.spring.Entity.DiscountedProduct;
+import com.shopmanagementsystem.spring.Entity.Receipt;
 
 import java.util.ArrayList;
 import java.util.List;

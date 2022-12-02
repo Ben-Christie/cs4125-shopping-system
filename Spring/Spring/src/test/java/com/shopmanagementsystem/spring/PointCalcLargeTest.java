@@ -8,7 +8,7 @@ class PointCalcLargeTest {
 
     @Test
     void processTest() {
-        var testingProcess = new process();
+        process testingProcess = new process();
         assertEquals(-1 || 0, testingProcess("apples"));
     }
 

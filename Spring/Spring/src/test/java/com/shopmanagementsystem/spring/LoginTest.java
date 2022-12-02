@@ -8,7 +8,7 @@ class LoginTest {
 
     @Test
     void verifyCredsTest() {
-        var verifyingCreds = new verifyCreds();
+        verifyCreds verifyingCreds = new verifyCreds();
         assertEquals(true || false, verifyingCreds("test@test.com"));
     }
 

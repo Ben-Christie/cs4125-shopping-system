@@ -9,7 +9,7 @@ import android.os.Bundle;
 
 import java.util.List;
 
-import Model.Purchase.Order.ProductEntity;
+
 import UIControls.ProductOrderController;
 import system.ui.Adapters.ProductRecyclerAdapter;
 
@@ -26,16 +26,16 @@ public class BrowseProductUI extends AppCompatActivity implements ProductRecycle
 
     private void setAdapter() {
         //pass list of data into parentheses
-        ProductOrderController productOrderController = new ProductOrderController(BrowseProductUI.this);
+        //ProductOrderController productOrderController = new ProductOrderController(BrowseProductUI.this);
 
 
 
 
-        ProductRecyclerAdapter productRecyclerAdapter = new ProductRecyclerAdapter(productOrderController.listOfProducts(),BrowseProductUI.this,BrowseProductUI.this);
-        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getApplicationContext());
-        recyclerView.setLayoutManager(layoutManager);
-        recyclerView.setItemAnimator(new DefaultItemAnimator());
-        recyclerView.setAdapter(productRecyclerAdapter);
+//        ProductRecyclerAdapter productRecyclerAdapter = new ProductRecyclerAdapter(productOrderController.listOfProducts(),BrowseProductUI.this,BrowseProductUI.this);
+//        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getApplicationContext());
+//        recyclerView.setLayoutManager(layoutManager);
+//        recyclerView.setItemAnimator(new DefaultItemAnimator());
+//        recyclerView.setAdapter(productRecyclerAdapter);
 
     }
 

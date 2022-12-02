@@ -18,8 +18,8 @@ public class SubscriberController {
         s.sendNotification(message);
     }
 
-    @PostMapping("/Subscriber/notifySubscribers")
-    public void addSubscriber(String type, String email){
-        s.addSubscriber();
-    }
+//    @PostMapping("/Subscriber/notifySubscribers")
+//    public void addSubscriber(){
+//        s.addSubscriber();
+//    }
 }

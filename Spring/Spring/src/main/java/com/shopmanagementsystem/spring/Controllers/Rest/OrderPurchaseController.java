@@ -1,6 +1,8 @@
 package com.shopmanagementsystem.spring.Controllers.Rest;
 
+import com.shopmanagementsystem.spring.DTO.ProductDTO;
 import com.shopmanagementsystem.spring.Entity.Product;
+import com.shopmanagementsystem.spring.Mappers.ProductMapper;
 import com.shopmanagementsystem.spring.model.Purchase.Order.DisplayProducts;
 import com.shopmanagementsystem.spring.model.Purchase.Order.ProductOrder;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,14 +25,18 @@ public class OrderPurchaseController {
     @Autowired
     private DisplayProducts dp;
 
+    @Autowired
+    private ProductMapper productMapper;
+
 
     /*
      * System receives products from UI that the user would like to order -> stores
      * them in the cart until user clicks checkout
      */
     @PostMapping("/OrderPurchase/receiveProductForOrder")
-    public void receiveProductForOrder(@RequestBody Product product) {
-        pfo.addToCart(product);
+    public void receiveProductForOrder(@RequestBody ProductDTO product) {
+        Product productEntity = productMapper.DTOToEntity(product);
+        pfo.addToCart(productEntity);
     }
 
     /*

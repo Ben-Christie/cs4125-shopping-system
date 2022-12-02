@@ -19,7 +19,4 @@ public class ReceiptDTO {
         this.purchases = purchases;
     }
 
-    public List<Product> getPurchases() {
-        return purchases;
-    }
 }

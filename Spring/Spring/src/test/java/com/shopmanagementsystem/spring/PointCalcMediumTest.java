@@ -8,7 +8,7 @@ class PointCalcMediumTest {
 
     @Test
     void processTest() {
-        var testingProcess = new process();
+        process testingProcess = new process();
         assertEquals(0, testingProcess("strawberries"));
     }
 
